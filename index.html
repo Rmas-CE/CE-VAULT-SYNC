@@ -449,7 +449,7 @@ footer{padding:32px 6vw;border-top:1px solid var(--line);display:flex;justify-co
   <div class="foot-e">
     <div class="soc"><a href="#guides">Merch Guides</a><a href="#tutorials">Tutorials</a></div>
     <div class="nums">
-      <a href="#tools"><b>6</b><small>Tools</small></a>
+      <a href="#tools"><b>7</b><small>Tools</small></a>
       <a href="#guides"><b>10</b><small>Merch Guides</small></a>
       <a href="#tutorials"><b>3</b><small>Tutorials</small></a>
     </div>
@@ -513,7 +513,8 @@ const LINKS = {
   inventory: "https://samsung-ce.github.io/RMAS-APPLICATION-MOBILE/",   // ← POSM Inventory Tool
   request:   "https://samsung-ce.github.io/RMAS-REQUEST-FORM/",   // ← POSM Request Form
   audit:     "",   // ← POSM Display Audit
-  scorecard: "https://samsung-ce.github.io/RMAS-KPI-TOOL/"    // ← TS Performance Scorecard
+  scorecard: "",   // ← TS Performance Scorecard (paste new link here)
+  deployment: ""    // ← Store Deployment Monthly Status (paste link here)
 };
 
 const ICONS = {
@@ -536,6 +537,8 @@ const TOOLS = [
    desc:"Store visit audit for leaders: camera-only photos plus complete, outdated, damaged and clean checks.", tags:["Camera","Store Visit","Scoring"]},
   {id:"ts",   name:"TS Performance Scorecard", url:LINKS.scorecard, icon:"chart",
    desc:"Monthly Trade Supervisor scorecard on Reporting, Execution and Communication, per BU and overall.", tags:["Monthly","Per BU","Ranking"]},
+  {id:"sdm",  name:"Store Deployment Monthly Status", url:LINKS.deployment, icon:"truck",
+   desc:"Monthly POSM deployment status per store and BU — deployed vs. pending, tracked across regions and Trade Supervisors.", tags:["Monthly","Per Store","Per BU"]},
   {id:"mg",   name:"CE Merchandising Guide",   url:"#guides", icon:"book",
    desc:"Official merchandising guides for TV, Sound Device, Display, Refrigerator, Air Conditioner and Washing Machine — POSM placement and display standards.", tags:["TV / SD / DS","REF","AC","WM"]},
   {id:"exa",  name:"Execution Analytics",      url:"https://claude.ai/artifact/AP5aKQrFtC2FAyKhmJ4Z1A", icon:"pie",
