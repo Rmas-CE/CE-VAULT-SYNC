@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 420" width="1280" height="420" role="img" aria-label="VaultSync — Smart POSM Inventory Solutions">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0a1a4a"/>
+      <stop offset="100%" stop-color="#06102c"/>
+    </linearGradient>
+    <linearGradient id="tile" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1B4ED8"/>
+      <stop offset="55%" stop-color="#1236B0"/>
+      <stop offset="100%" stop-color="#0A1F6A"/>
+    </linearGradient>
+    <linearGradient id="tileShine" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#6EA8FF" stop-opacity="0.32"/>
+      <stop offset="48%" stop-color="#6EA8FF" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="cyan" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#E8F6FF"/>
+      <stop offset="50%" stop-color="#7EC8FF"/>
+      <stop offset="100%" stop-color="#4AA6FF"/>
+    </linearGradient>
+    <linearGradient id="rule" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#7EC8FF" stop-opacity="0"/>
+      <stop offset="15%" stop-color="#7EC8FF"/>
+      <stop offset="100%" stop-color="#7EC8FF" stop-opacity="0.15"/>
+    </linearGradient>
+    <filter id="softGlow" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="3" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="hotGlow" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="5" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <rect width="1280" height="420" fill="url(#bg)"/>
+  <circle cx="640" cy="-40" r="360" fill="#1a4fe0" opacity="0.16"/>
+
+  <!-- icon tile -->
+  <g transform="translate(92,86)">
+    <rect width="248" height="248" rx="54" fill="url(#tile)"/>
+    <rect width="248" height="248" rx="54" fill="url(#tileShine)"/>
+    <rect x="6" y="6" width="236" height="236" rx="48" fill="none" stroke="#7EB6FF" stroke-opacity="0.28" stroke-width="2"/>
+    <g transform="translate(124,124)" fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M-52 -28 A62 62 0 0 1 50 -46" stroke="url(#cyan)" stroke-width="16" filter="url(#softGlow)"/>
+      <path d="M52 28 A62 62 0 0 1 -50 46" stroke="url(#cyan)" stroke-width="16" filter="url(#softGlow)"/>
+      <path d="M-64 -18 L-52 -42 L-30 -28" fill="#9FD4FF" stroke="none"/>
+      <path d="M64 18 L52 42 L30 28" fill="#9FD4FF" stroke="none"/>
+      <circle r="44" stroke="#D7ECFF" stroke-width="6"/>
+      <g>
+        <circle r="27" stroke="#7EC8FF" stroke-width="5" filter="url(#softGlow)"/>
+        <circle r="9" fill="#F4FBFF" stroke="none" filter="url(#hotGlow)">
+          <animate attributeName="r" values="9;9;9;9;9;9;9;9;9.6;9" keyTimes="0;0.30;0.36;0.54;0.60;0.74;0.80;0.90;0.93;1" dur="26s" repeatCount="indefinite"/>
+        </circle>
+        <g stroke="#B9E0FF" stroke-width="4">
+          <path d="M0 -40 v10"/>
+          <path d="M0 30 v10"/>
+          <path d="M-40 0 h10"/>
+          <path d="M30 0 h10"/>
+          <path d="M-28 -28 l8 8"/>
+          <path d="M20 20 l8 8"/>
+          <path d="M20 -28 l-8 8"/>
+          <path d="M-28 20 l8 8"/>
+        </g>
+        <animateTransform attributeName="transform" type="rotate"
+          dur="26s" repeatCount="indefinite" calcMode="discrete"
+          values="0;15;30;45;60;75;90;105;120;135;150;165;180;195;210;225;240;255;270;285;300;315;330;345;360;375;390;405;420;435;450;465;480;495;510;525;540;555;570;585;600;615;630;645;660;675;690;705;720;735;750;765;780;795;810;825;840;855;870;885;900;915;930;945;960;975;990;1005;1020;1035;1050;1065;1080;1080;1080;1080;1080;1080;1065;1050;1035;1020;1005;990;975;960;945;930;915;900;885;870;855;840;825;810;795;780;765;750;735;720;705;690;675;660;645;630;615;600;585;570;555;540;525;510;495;480;465;450;435;420;420;420;420;420;420;435;450;465;480;495;510;525;540;555;570;585;600;615;630;645;640;640;640;640;640;640;625;610;595;580;565;550;535;520;505;510;510;510;510;510;510;510"
+          keyTimes="0;0.00613;0.01227;0.0184;0.02454;0.03067;0.03681;0.04294;0.04908;0.05521;0.06135;0.06748;0.07362;0.07975;0.08589;0.09202;0.09816;0.10429;0.11043;0.11656;0.1227;0.12883;0.13497;0.1411;0.14724;0.15337;0.15951;0.16564;0.17178;0.17791;0.18405;0.19018;0.19632;0.20245;0.20859;0.21472;0.22086;0.22699;0.23313;0.23926;0.2454;0.25153;0.25767;0.2638;0.26994;0.27607;0.28221;0.28834;0.29448;0.30061;0.30675;0.31288;0.31902;0.32515;0.33129;0.33742;0.34356;0.34969;0.35583;0.36196;0.3681;0.37423;0.38037;0.3865;0.39264;0.39877;0.40491;0.41104;0.41718;0.42331;0.42945;0.43558;0.44172;0.44785;0.45399;0.46012;0.46626;0.47239;0.47853;0.48466;0.4908;0.49693;0.50307;0.5092;0.51534;0.52147;0.52761;0.53374;0.53988;0.54601;0.55215;0.55828;0.56442;0.57055;0.57669;0.58282;0.58896;0.59509;0.60123;0.60736;0.6135;0.61963;0.62577;0.6319;0.63804;0.64417;0.65031;0.65644;0.66258;0.66871;0.67485;0.68098;0.68712;0.69325;0.69939;0.70552;0.71166;0.71779;0.72393;0.73006;0.7362;0.74233;0.74847;0.7546;0.76074;0.76687;0.77301;0.77914;0.78528;0.79141;0.79755;0.80368;0.80982;0.81595;0.82209;0.82822;0.83436;0.84049;0.84663;0.85276;0.8589;0.86503;0.87117;0.8773;0.88344;0.88957;0.89571;0.90184;0.90798;0.91411;0.92025;0.92638;0.93252;0.93865;0.94479;0.95092;0.95706;0.96319;0.96933;0.97546;0.9816;0.98773;0.99387;1"/>
+      </g>
+    </g>
+  </g>
+
+  <!-- wordmark -->
+  <text x="380" y="210" font-family="Segoe UI, Inter, Arial, sans-serif" font-size="92" font-weight="800" letter-spacing="1">
+    <tspan fill="#E8F1FF">Vault</tspan><tspan fill="#6EC8FF">Sync</tspan>
+  </text>
+  <rect x="380" y="236" width="780" height="3" rx="2" fill="url(#rule)"/>
+  <text x="380" y="278" font-family="Segoe UI, Inter, Arial, sans-serif" font-size="22" font-weight="700" letter-spacing="4.2" fill="#9BB3D6">SMART POSM INVENTORY SOLUTIONS</text>
+</svg>
