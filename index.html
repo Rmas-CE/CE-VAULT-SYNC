@@ -3,802 +3,437 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>VaultSync</title>
+<title>VaultSync — Smart POSM Inventory Solutions</title>
+<meta name="description" content="VaultSync: POSM inventory, request and scorecard tools, CE merchandising guides and training videos for the SEPCO Shop Enhancement and RMAS teams.">
+<!-- Keeps the page out of search results. It does NOT restrict access: anyone with the link can still open it. -->
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#0B1B5C">
+<meta property="og:type" content="website">
+<meta property="og:title" content="VaultSync — Smart POSM Inventory Solutions">
+<meta property="og:description" content="POSM tools, merchandising guides and training videos in one place.">
+<meta property="og:url" content="https://samsung-ce.github.io/RMAS-VAULT-SYNC/">
+<meta property="og:image" content="https://samsung-ce.github.io/RMAS-VAULT-SYNC/images/og-cover.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNDggMjQ4Ij48ZGVmcz48bGluZWFyR3JhZGllbnQgaWQ9InZzVCIgeDE9IjAiIHkxPSIwIiB4Mj0iMCIgeTI9IjEiPjxzdG9wIG9mZnNldD0iMCIgc3RvcC1jb2xvcj0iIzFCNEVEOCIvPjxzdG9wIG9mZnNldD0iLjU1IiBzdG9wLWNvbG9yPSIjMTIzNkIwIi8+PHN0b3Agb2Zmc2V0PSIxIiBzdG9wLWNvbG9yPSIjMEExRjZBIi8+PC9saW5lYXJHcmFkaWVudD48bGluZWFyR3JhZGllbnQgaWQ9InZzUyIgeDE9IjAiIHkxPSIwIiB4Mj0iMSIgeTI9IjEiPjxzdG9wIG9mZnNldD0iMCIgc3RvcC1jb2xvcj0iIzZFQThGRiIgc3RvcC1vcGFjaXR5PSIuMzIiLz48c3RvcCBvZmZzZXQ9Ii40OCIgc3RvcC1jb2xvcj0iIzZFQThGRiIgc3RvcC1vcGFjaXR5PSIwIi8+PC9saW5lYXJHcmFkaWVudD48bGluZWFyR3JhZGllbnQgaWQ9InZzQyIgeDE9IjAiIHkxPSIwIiB4Mj0iMSIgeTI9IjEiPjxzdG9wIG9mZnNldD0iMCIgc3RvcC1jb2xvcj0iI0U4RjZGRiIvPjxzdG9wIG9mZnNldD0iLjUiIHN0b3AtY29sb3I9IiM3RUM4RkYiLz48c3RvcCBvZmZzZXQ9IjEiIHN0b3AtY29sb3I9IiM0QUE2RkYiLz48L2xpbmVhckdyYWRpZW50PjwvZGVmcz48cmVjdCB3aWR0aD0iMjQ4IiBoZWlnaHQ9IjI0OCIgcng9IjU0IiBmaWxsPSJ1cmwoI3ZzVCkiLz48cmVjdCB3aWR0aD0iMjQ4IiBoZWlnaHQ9IjI0OCIgcng9IjU0IiBmaWxsPSJ1cmwoI3ZzUykiLz48cmVjdCB4PSI2IiB5PSI2IiB3aWR0aD0iMjM2IiBoZWlnaHQ9IjIzNiIgcng9IjQ4IiBmaWxsPSJub25lIiBzdHJva2U9IiM3RUI2RkYiIHN0cm9rZS1vcGFjaXR5PSIuMjgiIHN0cm9rZS13aWR0aD0iMiIvPjxnIHRyYW5zZm9ybT0idHJhbnNsYXRlKDEyNCwxMjQpIiBmaWxsPSJub25lIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiPjxwYXRoIGQ9Ik0tNTIgLTI4IEE2MiA2MiAwIDAgMSA1MCAtNDYiIHN0cm9rZT0idXJsKCN2c0MpIiBzdHJva2Utd2lkdGg9IjE2Ii8+PHBhdGggZD0iTTUyIDI4IEE2MiA2MiAwIDAgMSAtNTAgNDYiIHN0cm9rZT0idXJsKCN2c0MpIiBzdHJva2Utd2lkdGg9IjE2Ii8+PHBhdGggZD0iTS02NCAtMTggTC01MiAtNDIgTC0zMCAtMjgiIGZpbGw9IiM5RkQ0RkYiIHN0cm9rZT0ibm9uZSIvPjxwYXRoIGQ9Ik02NCAxOCBMNTIgNDIgTDMwIDI4IiBmaWxsPSIjOUZENEZGIiBzdHJva2U9Im5vbmUiLz48Y2lyY2xlIHI9IjQ0IiBzdHJva2U9IiNEN0VDRkYiIHN0cm9rZS13aWR0aD0iNiIvPjxnIGNsYXNzPSJ2cy1kaWFsIj48Y2lyY2xlIHI9IjI3IiBzdHJva2U9IiM3RUM4RkYiIHN0cm9rZS13aWR0aD0iNSIvPjxjaXJjbGUgcj0iOSIgZmlsbD0iI0Y0RkJGRiIgc3Ryb2tlPSJub25lIi8+PGcgc3Ryb2tlPSIjQjlFMEZGIiBzdHJva2Utd2lkdGg9IjQiPjxwYXRoIGQ9Ik0wIC00MCB2MTAiLz48cGF0aCBkPSJNMCAzMCB2MTAiLz48cGF0aCBkPSJNLTQwIDAgaDEwIi8+PHBhdGggZD0iTTMwIDAgaDEwIi8+PHBhdGggZD0iTS0yOCAtMjggbDggOCIvPjxwYXRoIGQ9Ik0yMCAyMCBsOCA4Ii8+PHBhdGggZD0iTTIwIC0yOCBsLTggOCIvPjxwYXRoIGQ9Ik0tMjggMjAgbDggOCIvPjwvZz48L2c+PC9nPjwvc3ZnPg==">
-<meta name="theme-color" content="#020a16">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Inter+Tight:wght@300;400;500;600&family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
 <style>
+/* =====================================================================
+   VaultSync — design tokens aligned with NEXUS HUB v4
+   Samsung blue is a brand accent (cover, logo); neutral surfaces carry the
+   content; one functional accent for links, primary buttons and focus.
+   ===================================================================== */
 :root{
-  --bg:#030d17; --bg2:#06182a;
-  --ink:#eaf4ff; --muted:#8aa6c1;
-  --accent:#3d9bff; --accent2:#8fd0ff;
-  --glow:rgba(61,155,255,.55);
-  --line:rgba(160,200,240,.16);
-  --card1:rgba(18,52,90,.55); --card2:rgba(5,18,32,.75);
-  --node:#0a2447; --soft:rgba(61,155,255,.16);
+  --sam-blue:#1428A0; --sam-blue-dark:#0B1B5C; --sam-navy:#000000;
+  --accent:#2A5FD9; --accent-dark:#1E48AE;
+  --g1:#F3F4F6; --g2:#E3E6EB; --g3:#C4C9D2; --surface:#FFFFFF;
+  --ink:#12141A; --ink-soft:#5B6270;
+  --info:#1E4FA6; --info-bg:#E7EEFB;
+  --cover-ink:#C7CDEE; --cover-faint:#8892C4;
+  --radius:10px;
+  --shadow:0 1px 2px rgba(15,20,30,.05),0 4px 16px rgba(15,20,30,.06);
+  --font-ui:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
+  --font-head:'Poppins','Inter',-apple-system,sans-serif;
 }
-body.v-c{
-  --bg:#eef4fb; --bg2:#e2ecf8;
-  --ink:#0b1f3f; --muted:#53698a;
-  --accent:#1f6fff; --accent2:#1f6fff;
-  --glow:rgba(31,111,255,.35);
-  --line:rgba(11,31,63,.12);
-  --card1:#ffffff; --card2:#f4f8fe;
-  --node:#0b2a55; --soft:rgba(31,111,255,.1);
-}
-*{box-sizing:border-box;margin:0;padding:0}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
 html{scroll-behavior:smooth}
-body{font-family:'Montserrat',system-ui,sans-serif;background:var(--bg);color:var(--ink);min-height:100vh;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+body{font-family:var(--font-ui);color:var(--ink);background:var(--g1);font-size:14px;line-height:1.45;-webkit-font-smoothing:antialiased}
+h1,h2,h3,p{margin:0}
+h1,h2,h3{font-family:var(--font-head);font-weight:700}
 a{color:inherit;text-decoration:none}
+button{font:inherit;cursor:pointer}
+:focus-visible{outline:2px solid var(--accent);outline-offset:2px;border-radius:6px}
+.cover :focus-visible{outline-color:#7FD8FF}
+.skip{position:absolute;left:-999px;top:8px;z-index:100;background:#fff;color:var(--ink);padding:8px 14px;border-radius:8px;font-weight:600}
+.skip:focus{left:8px}
 
-/* ---------- VISTA wordmark ---------- */
-.wm{display:inline-flex;align-items:baseline;font-weight:900;line-height:1;letter-spacing:.01em}
-.wm svg{height:.70em;width:.8em;margin-left:.02em;overflow:visible}
-.wm .leg{fill:currentColor}
-.wm .tri{fill:var(--accent)}
-
-/* ---------- shared hero ---------- */
-.hero{position:relative;min-height:100vh;display:none;flex-direction:column;overflow:hidden}
-body.v-a .hero-a, body.v-b .hero-b, body.v-c .hero-c{display:flex}
-nav{position:relative;z-index:6;display:flex;align-items:center;justify-content:space-between;padding:26px 6vw;gap:16px}
-.brand{display:flex;align-items:baseline;gap:8px}
-.brand small{font-size:12px;font-weight:700;letter-spacing:.18em}
-.brand .wm{font-size:24px}
-.links{display:flex;gap:40px;font-size:11px;font-weight:600;letter-spacing:2px;text-transform:uppercase}
-.links a{opacity:.8;transition:opacity .2s,color .2s}
-.links a:hover{opacity:1;color:var(--accent2)}
-.btn-outline{display:inline-flex;align-items:center;gap:10px;border:1px solid currentColor;border-radius:6px;padding:11px 24px;font-size:11px;font-weight:600;letter-spacing:2px;text-transform:uppercase;transition:background .25s,box-shadow .25s,border-color .25s,color .25s;white-space:nowrap}
-.btn-outline:hover{background:var(--soft);border-color:var(--accent);color:var(--accent2);box-shadow:0 0 24px var(--glow)}
-.btn-solid{display:inline-flex;align-items:center;gap:10px;background:var(--accent);color:#fff;border-radius:8px;padding:15px 28px;font-size:12px;font-weight:700;letter-spacing:2px;text-transform:uppercase;box-shadow:0 10px 30px var(--glow);transition:transform .25s}
-.btn-solid:hover{transform:translateY(-2px)}
-.tagline{font-size:clamp(10px,1.1vw,13px);font-weight:700;letter-spacing:.34em;text-transform:uppercase;color:var(--accent2)}
-
-.stats{position:relative;z-index:4;display:grid;grid-template-columns:repeat(3,1fr) 1.2fr auto;border-top:1px solid var(--line);background:rgba(2,10,18,.55);backdrop-filter:blur(10px)}
-body.v-c .stats{background:rgba(255,255,255,.7)}
-.stat{padding:24px 14px;text-align:center;border-right:1px solid var(--line)}
-.stat b{display:block;font-size:clamp(22px,2.4vw,30px);font-weight:700}
-.stat small{font-size:10px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:var(--muted)}
-.play{display:flex;align-items:center;justify-content:center;gap:14px;border-right:1px solid var(--line);font-size:11px;font-weight:600;letter-spacing:2px;text-transform:uppercase;padding:18px}
-.play i{width:46px;height:46px;border:1.5px solid currentColor;border-radius:50%;display:grid;place-items:center;transition:box-shadow .25s,border-color .25s}
-.play:hover i{border-color:var(--accent);box-shadow:0 0 20px var(--glow)}
-.foot-tag{display:flex;align-items:center;justify-content:center;padding:0 32px;font-size:10px;letter-spacing:2px;color:var(--muted);text-transform:uppercase}
-
-.particles{position:absolute;inset:0;pointer-events:none;overflow:hidden}
-.dot{position:absolute;width:2px;height:2px;border-radius:50%;background:#cfe6ff;opacity:.5;animation:rise linear infinite}
-@keyframes rise{from{transform:translateY(0);opacity:0}15%{opacity:.7}to{transform:translateY(-60vh);opacity:0}}
-
-/* ---------- OPTION A : cinematic portal ---------- */
-.hero-a{background:
-  radial-gradient(ellipse 60% 55% at 64% 48%,rgba(50,130,230,.45),transparent 70%),
-  radial-gradient(ellipse 90% 70% at 50% 110%,rgba(30,90,170,.35),transparent 70%),
-  linear-gradient(180deg,#030f1d 0%,#0a2442 55%,#041222 100%)}
-.hero-a::after{content:"";position:absolute;left:0;right:0;bottom:0;height:34%;background:linear-gradient(180deg,transparent,rgba(3,13,23,.6) 40%,rgba(3,13,23,.95));pointer-events:none;z-index:1}
-.stage-a{position:relative;flex:1;display:flex;align-items:center;z-index:2;padding:0 6vw}
-.portal{position:absolute;left:64%;top:50%;width:min(34vw,420px);aspect-ratio:.72;transform:translate(-50%,-52%) rotate(8deg);border-radius:50%;border:7px solid #e2f1ff;
-  box-shadow:0 0 18px #cde7ff,0 0 50px rgba(61,155,255,.95),0 0 130px rgba(61,155,255,.55),inset 0 0 18px #cde7ff,inset 0 0 60px rgba(61,155,255,.6);animation:pulse 5s ease-in-out infinite}
-.portal::after{content:"";position:absolute;left:-12%;right:-12%;top:47%;height:9px;background:linear-gradient(90deg,transparent,rgba(220,240,255,.9),transparent);filter:blur(1px);animation:glitch 3.2s steps(1) infinite}
-@keyframes pulse{0%,100%{filter:brightness(1)}50%{filter:brightness(1.2)}}
-@keyframes glitch{0%,86%,100%{transform:translateX(0);opacity:0}88%{transform:translateX(-14px);opacity:1}92%{transform:translateX(10px);opacity:.8}95%{opacity:0}}
-.fog{position:absolute;left:64%;bottom:18%;width:min(50vw,640px);height:180px;transform:translateX(-50%);background:radial-gradient(ellipse at center,rgba(170,210,250,.3),transparent 65%);filter:blur(20px)}
-.copy-a{position:relative;z-index:3}
-.pre{font-size:clamp(18px,2.2vw,30px);font-weight:800;letter-spacing:.6em;margin-bottom:10px;opacity:.95}
-.title-a{font-size:clamp(58px,12vw,176px);letter-spacing:.2em}
-.title-a .wm{gap:.2em;letter-spacing:0}
-.title-a .cut{background:linear-gradient(180deg,var(--ink) 0 46%,transparent 46% 54%,var(--ink) 54% 100%);-webkit-background-clip:text;background-clip:text;color:transparent}
-.title-a .behind{opacity:.55}
-.copy-a .tagline{margin-top:24px}
-.cta{margin-top:30px;display:inline-flex;align-items:center;gap:10px;font-size:11px;font-weight:600;letter-spacing:2px;text-transform:uppercase}
-.cta:hover{color:var(--accent2)}
-
-/* ---------- OPTION B / C : orbit ---------- */
-.hero-b{background:
-  radial-gradient(circle at 50% 48%,rgba(40,110,210,.40),transparent 45%),
-  radial-gradient(ellipse 90% 60% at 50% 120%,rgba(20,70,150,.4),transparent 70%),
-  linear-gradient(180deg,#020a14,#061a33 60%,#030d17)}
-.stage-b{position:relative;flex:1;display:grid;place-items:center;padding:30px 16px 60px;z-index:2}
-.orbit{position:relative;width:var(--S);height:var(--S);--S:min(560px,78vw)}
-.orbit svg.ring{position:absolute;inset:0;width:100%;height:100%;overflow:visible}
-.ring .track{fill:none;stroke:var(--accent);stroke-opacity:.25;stroke-width:1.5}
-.ring .flow{fill:none;stroke:url(#flowGrad);stroke-width:3;stroke-linecap:round;stroke-dasharray:60 240;animation:flow 6s linear infinite;filter:drop-shadow(0 0 6px var(--accent))}
-body.v-c .ring .flow{filter:none}
-@keyframes flow{to{stroke-dashoffset:-1200}}
-.center{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center}
-.center .r{font-size:clamp(18px,3.4vw,34px);font-weight:800;letter-spacing:.06em}
-.center .wm{font-size:clamp(52px,12vw,118px);margin-top:2px}
-.center .tagline{margin-top:14px;line-height:1.7;letter-spacing:.24em;max-width:16em}
-.center .btn-solid{margin-top:22px}
-.node{position:absolute;transform:translate(-50%,-50%);display:flex;flex-direction:column;align-items:center;gap:10px;z-index:3;cursor:pointer}
-.node i{width:var(--N);height:var(--N);--N:clamp(52px,8vw,82px);border-radius:50%;display:grid;place-items:center;background:radial-gradient(circle at 35% 30%,#1a4c8a,var(--node) 70%);color:#fff;border:2px solid rgba(120,190,255,.7);box-shadow:0 0 0 6px rgba(61,155,255,.12),0 0 28px var(--glow);transition:transform .3s,box-shadow .3s}
-.node i svg{width:44%;height:44%}
-.node span{font-size:clamp(9px,1vw,12px);font-weight:800;letter-spacing:.12em;text-transform:uppercase;white-space:nowrap}
-.node:hover i{transform:scale(1.08);box-shadow:0 0 0 8px rgba(61,155,255,.2),0 0 40px var(--glow)}
-.node.lbl-top span{order:-1}
-
-.hero-c{background:radial-gradient(circle at 72% 45%,#ffffff,transparent 45%),linear-gradient(180deg,#f3f7fc,#e4edf8)}
-.stage-c{position:relative;flex:1;display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:40px;padding:20px 6vw 60px;z-index:2}
-.copy-c .r{font-size:clamp(22px,2.6vw,36px);font-weight:800;letter-spacing:.08em}
-.copy-c .wm{font-size:clamp(70px,10vw,150px)}
-.copy-c .tagline{margin-top:18px}
-.copy-c p{margin-top:22px;max-width:440px;color:var(--muted);line-height:1.7;font-size:15px}
-.copy-c .btns{margin-top:30px;display:flex;gap:14px;flex-wrap:wrap}
-.hero-c .orbit{--S:min(440px,40vw);justify-self:center}
-.hero-c .node i{--N:clamp(50px,5.4vw,70px)}
-.hero-c .center .wm{font-size:clamp(34px,4.6vw,56px)}
-.hero-c .center .r{font-size:clamp(14px,1.6vw,20px)}
-
-/* ---------- TOOLS ---------- */
-.tools{position:relative;padding:100px 6vw 90px;background:radial-gradient(ellipse 50% 40% at 50% 0%,var(--soft),transparent 70%),linear-gradient(180deg,var(--bg2),var(--bg))}
-.head{display:flex;align-items:flex-end;justify-content:space-between;gap:24px;margin-bottom:46px;flex-wrap:wrap}
-.eyebrow{font-size:11px;font-weight:700;letter-spacing:.34em;text-transform:uppercase;color:var(--accent)}
-.head h2{margin-top:12px;font-size:clamp(28px,4vw,48px);font-weight:800;letter-spacing:.12em;text-transform:uppercase;display:flex;align-items:baseline;gap:.4em;flex-wrap:wrap}
-.head p{max-width:420px;color:var(--muted);font-size:14px;line-height:1.7}
-.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:22px}
-.card{position:relative;display:flex;flex-direction:column;min-height:280px;padding:30px 28px 26px;border-radius:18px;background:linear-gradient(160deg,var(--card1),var(--card2));border:1px solid var(--line);overflow:hidden;cursor:pointer;transition:transform .35s cubic-bezier(.2,.8,.2,1),border-color .35s,box-shadow .35s}
-body.v-c .card{box-shadow:0 8px 30px rgba(11,31,63,.06)}
-.card::before{content:"";position:absolute;right:-70px;top:-70px;width:200px;height:240px;border-radius:50%;border:3px solid var(--line);transform:rotate(18deg);transition:border-color .35s,box-shadow .35s}
-.card:hover{transform:translateY(-6px);border-color:var(--accent);box-shadow:0 18px 50px rgba(0,0,0,.25),0 0 40px var(--soft)}
-.card:hover::before{border-color:var(--accent);box-shadow:0 0 30px var(--glow)}
-.num{font-size:11px;font-weight:700;letter-spacing:.3em;color:var(--muted)}
-.ico{margin:22px 0 20px;width:54px;height:54px;border-radius:50%;display:grid;place-items:center;background:var(--node);border:2px solid rgba(120,190,255,.6);color:#fff;box-shadow:0 0 18px var(--glow)}
-.card h3{font-size:18px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;line-height:1.3}
-.card p{margin-top:10px;font-size:13.5px;line-height:1.65;color:var(--muted);flex:1}
-.tags{margin-top:16px;display:flex;flex-wrap:wrap;gap:6px}
-.tags span{font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;padding:5px 9px;border-radius:999px;border:1px solid var(--line);color:var(--muted)}
-.open{margin-top:20px;display:flex;align-items:center;justify-content:space-between;font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;padding-top:16px;border-top:1px solid var(--line)}
-.card:hover .open{color:var(--accent)}
-.card.soon{cursor:default}.card.soon .open{color:var(--muted)}
-.card.soon:hover{transform:none;border-color:var(--line);box-shadow:none}
-.card.flash{animation:flash 1.4s ease}
-@keyframes flash{0%,100%{box-shadow:none}30%{box-shadow:0 0 0 3px var(--accent),0 0 40px var(--glow)}}
-
-/* ---------- TUTORIALS ---------- */
-.tuts{padding:90px 6vw 100px;background:linear-gradient(180deg,var(--bg),var(--bg2))}
-.vgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
-.vcard{display:flex;flex-direction:column;border-radius:18px;overflow:hidden;background:var(--card1);border:1px solid var(--line);box-shadow:0 8px 30px rgba(11,31,63,.06);cursor:pointer;text-align:left;font:inherit;color:inherit;padding:0;transition:transform .35s cubic-bezier(.2,.8,.2,1),border-color .35s,box-shadow .35s}
-.vcard:hover,.vcard:focus-visible{transform:translateY(-6px);border-color:var(--accent);box-shadow:0 18px 44px rgba(11,31,63,.14);outline:none}
-.thumb{position:relative;aspect-ratio:16/10;background:#0b1a3a center/cover no-repeat;display:grid;place-items:center}
-.thumb::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(6,20,45,.1),rgba(6,20,45,.55))}
-.thumb .pbtn{position:relative;z-index:2;width:66px;height:66px;border-radius:50%;display:grid;place-items:center;background:var(--accent);color:#fff;box-shadow:0 0 0 8px rgba(31,111,255,.25),0 10px 30px rgba(31,111,255,.5);transition:transform .3s}
-.vcard:hover .pbtn{transform:scale(1.1)}
-.thumb .dur{position:absolute;z-index:2;right:12px;bottom:12px;background:rgba(3,13,30,.8);color:#fff;font-size:11px;font-weight:700;letter-spacing:1px;padding:4px 8px;border-radius:6px}
-.thumb .fmt{position:absolute;z-index:2;left:12px;top:12px;background:rgba(255,255,255,.92);color:#0b1f3f;font-size:10px;font-weight:800;letter-spacing:1.5px;text-transform:uppercase;padding:5px 9px;border-radius:999px}
-.vbody{padding:22px 24px 24px}
-.vbody .num{display:block;margin-bottom:8px}
-.vbody h3{font-size:17px;font-weight:800;letter-spacing:.05em;text-transform:uppercase;line-height:1.3}
-.vbody p{margin-top:8px;font-size:13.5px;line-height:1.6;color:var(--muted)}
-.modal{position:fixed;inset:0;z-index:80;display:none;align-items:center;justify-content:center;padding:16px;background:rgba(3,10,24,.86);backdrop-filter:blur(6px)}
-.modal.open{display:flex}
-.mbox{position:relative;display:flex;flex-direction:column;align-items:center;gap:14px;max-width:100%}
-.mbox video{display:block;max-width:min(1100px,100%);max-height:calc(100vh - 120px);border-radius:14px;background:#000;box-shadow:0 20px 60px rgba(0,0,0,.5)}
-.mbox h4{color:#fff;font-size:13px;font-weight:700;letter-spacing:2px;text-transform:uppercase;text-align:center}
-.mclose{position:fixed;top:16px;right:16px;z-index:2;background:rgba(3,13,30,.6)!important;width:40px;height:40px;border-radius:50%;border:1px solid rgba(255,255,255,.4);background:transparent;color:#fff;font-size:22px;line-height:1;cursor:pointer}
-@media (max-width:900px){.vgrid{grid-template-columns:1fr 1fr}}
-@media (max-width:560px){.vgrid{grid-template-columns:1fr}.tuts{padding:70px 16px 70px}}
-
-/* ---------- MERCH GUIDES ---------- */
-.guides{padding:90px 6vw 40px;background:var(--bg)}
-.chips{display:flex;gap:8px;flex-wrap:wrap;margin:-18px 0 30px}
-.chip{font:inherit;font-size:11px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;padding:9px 16px;border-radius:999px;border:1px solid var(--line);background:var(--card1);color:var(--muted);cursor:pointer;transition:all .2s}
-.chip:hover{border-color:var(--accent);color:var(--accent)}
-.chip.on{background:var(--accent);border-color:var(--accent);color:#fff}
-.ggrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:22px}
-.gcard{display:flex;flex-direction:column;border-radius:18px;overflow:hidden;background:var(--card1);border:1px solid var(--line);box-shadow:0 8px 30px rgba(11,31,63,.06);transition:transform .35s cubic-bezier(.2,.8,.2,1),border-color .35s,box-shadow .35s}
-.gcard:hover{transform:translateY(-6px);border-color:var(--accent);box-shadow:0 18px 44px rgba(11,31,63,.14)}
-.gcover{position:relative;aspect-ratio:16/10;background:#0b1a3a center/cover no-repeat;border-bottom:1px solid var(--line)}
-.gcover.portrait{background-size:contain;background-color:#eef3fa}
-.gcover .badge{position:absolute;left:12px;top:12px;background:var(--accent);color:#fff;font-size:10px;font-weight:800;letter-spacing:1.5px;text-transform:uppercase;padding:5px 10px;border-radius:999px}
-.gcover .pages{position:absolute;right:12px;bottom:12px;background:rgba(3,13,30,.8);color:#fff;font-size:11px;font-weight:700;letter-spacing:1px;padding:4px 8px;border-radius:6px}
-.gbody{padding:20px 22px 22px;display:flex;flex-direction:column;flex:1}
-.gbody h3{font-size:15.5px;font-weight:800;letter-spacing:.04em;text-transform:uppercase;line-height:1.35}
-.gbody p{margin-top:8px;font-size:13px;line-height:1.6;color:var(--muted);flex:1}
-.gact{margin-top:16px;display:flex;gap:10px}
-.gact a{flex:1;text-align:center;font-size:11px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;padding:11px 10px;border-radius:8px;border:1px solid var(--line);transition:all .2s}
-.gact a.view{background:var(--accent);border-color:var(--accent);color:#fff}
-.gact a:hover{box-shadow:0 6px 18px var(--glow)}
-@media (max-width:560px){.guides{padding:70px 16px 30px}}
-
-/* ================= DESIGN D : ORB ================= */
-body.v-d{--bg:#020a16;--bg2:#04142a;--card1:rgba(20,60,110,.35);--card2:rgba(4,16,34,.8);--soft:rgba(80,160,255,.12);--accent:#4aa3ff;--accent2:#9ad2ff}
-.hero-d{position:relative;min-height:100vh;min-height:100svh;overflow:hidden;color:#fff;font-family:'Inter Tight','Montserrat',sans-serif;
-  background:radial-gradient(ellipse 85% 70% at 50% -5%,#2f8fd6 0%,#135694 28%,#0a2d57 55%,#041430 78%,#020a16 100%)}
-.hero-d::after{content:"";position:absolute;left:0;right:0;bottom:0;height:45%;background:linear-gradient(180deg,transparent,rgba(2,10,22,.85));pointer-events:none;z-index:1}
-.nav-d{position:relative;z-index:6;display:flex;align-items:center;justify-content:space-between;padding:22px 4vw;gap:16px}
-.nav-d .brand small{letter-spacing:.2em}
-.links-d{display:flex;gap:38px;font-size:14px;font-weight:400;opacity:.9}
-.links-d a{transition:opacity .2s}.links-d a:hover{opacity:.6}
-.pill-d{font-size:12px;font-weight:500;letter-spacing:.06em;text-transform:uppercase;padding:10px 20px;border-radius:999px;background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.28);backdrop-filter:blur(8px);transition:background .25s}
-.pill-d:hover{background:rgba(255,255,255,.26)}
-.scene{position:absolute;inset:0;z-index:2;pointer-events:none;--O:clamp(130px,15vw,210px);--cy:40%}
-.orb{position:absolute;left:50%;top:var(--cy);width:var(--O);aspect-ratio:1;transform:translate(-50%,-50%);border-radius:50%;z-index:3;
-  background:radial-gradient(circle at 38% 32%,#4f8fc4 0%,#1d4f80 38%,#0c2a4c 70%,#06182e 100%);
-  box-shadow:0 0 50px 14px rgba(90,180,255,.55),0 0 140px 50px rgba(40,130,230,.3),inset -14px -18px 34px rgba(0,0,0,.55),inset 8px 10px 22px rgba(170,220,255,.28);
-  animation:float 7s ease-in-out infinite}
-.orb::before{content:"";position:absolute;inset:0;border-radius:50%;
-  background:radial-gradient(rgba(200,230,255,.45) .8px,transparent 1.3px) 0 0/5px 5px;
-  -webkit-mask:radial-gradient(circle at 40% 35%,#000 0 45%,transparent 72%);mask:radial-gradient(circle at 40% 35%,#000 0 45%,transparent 72%);opacity:.7}
-.orb::after{content:"";position:absolute;inset:-3px;border-radius:50%;border:1px solid rgba(170,220,255,.35)}
-@keyframes float{0%,100%{transform:translate(-50%,-50%)}50%{transform:translate(-50%,-56%)}}
-.halo{position:absolute;left:50%;top:var(--cy);width:calc(var(--O)*3.2);aspect-ratio:1;transform:translate(-50%,-50%);border-radius:50%;background:radial-gradient(circle,rgba(110,190,255,.28),transparent 60%);filter:blur(10px)}
-.beam{position:absolute;left:50%;top:var(--cy);width:calc(var(--O)*1.6);height:62%;transform:translateX(-50%) perspective(400px) rotateX(-18deg);transform-origin:top;background:linear-gradient(180deg,rgba(130,205,255,.32),rgba(60,140,230,.1) 55%,transparent 90%);-webkit-mask:linear-gradient(90deg,transparent,#000 38%,#000 62%,transparent);mask:linear-gradient(90deg,transparent,#000 38%,#000 62%,transparent);filter:blur(6px)}
-.pedestal{position:absolute;left:50%;top:calc(var(--cy) + var(--O)*1.05);width:calc(var(--O)*1.3);height:18px;transform:translateX(-50%);border-radius:50%;background:radial-gradient(ellipse,rgba(170,220,255,.55),transparent 70%);filter:blur(4px);animation:shadow 7s ease-in-out infinite}
-@keyframes shadow{0%,100%{opacity:1;transform:translateX(-50%) scale(1)}50%{opacity:.6;transform:translateX(-50%) scale(.85)}}
-.orbit3d{position:absolute;left:50%;top:var(--cy);width:calc(var(--O)*2.5);aspect-ratio:1;transform:translate(-50%,-50%) perspective(900px) rotateX(76deg);border-radius:50%;border:1px solid rgba(170,215,255,.28);z-index:2}
-.orbit3d .spin{position:absolute;inset:0;animation:spin 26s linear infinite}
-.orbit3d i{position:absolute;left:50%;top:0;width:10px;height:10px;margin:-5px 0 0 -5px;border-radius:50%;background:#cfe9ff;box-shadow:0 0 12px 4px rgba(120,200,255,.8);transform-origin:5px calc(var(--O)*1.25 + 5px)}
-.orbit3d i:nth-child(2){transform:rotate(72deg)}.orbit3d i:nth-child(3){transform:rotate(144deg)}.orbit3d i:nth-child(4){transform:rotate(216deg)}.orbit3d i:nth-child(5){transform:rotate(288deg)}
-@keyframes spin{to{transform:rotate(360deg)}}
-.stat-d{position:absolute;z-index:4;text-align:center;transform:translate(-50%,-50%);display:grid;gap:6px;transition:opacity .2s}
-.stat-d:hover{opacity:.7}
-.stat-d small{font-size:13px;opacity:.6;font-weight:400}
-.stat-d b{font-size:14px;font-weight:500;white-space:nowrap}
-.s-top{left:50%;top:calc(40% - clamp(130px,15vw,210px)*.5 - 58px)}
-.s-left{left:calc(50% - clamp(210px,22vw,330px));top:48%}
-.s-right{left:calc(50% + clamp(210px,22vw,330px));top:48%}
-.hero-foot{position:absolute;z-index:5;left:0;right:0;bottom:0;padding:0 4vw 5.5vh;display:flex;justify-content:space-between;align-items:flex-end;gap:40px}
-.eyebrow-d{font-size:12px;letter-spacing:.3em;text-transform:uppercase;opacity:.6;margin-bottom:14px}
-.headline{font-family:'Inter Tight',sans-serif;font-weight:500;font-size:clamp(42px,5.6vw,88px);line-height:1.02;letter-spacing:-.035em}
-.side{max-width:360px;padding-bottom:6px}
-.side p{font-size:14px;line-height:1.55;opacity:.72}
-.btn-white{display:inline-block;margin-top:20px;background:#fff;color:#07172d;font-size:12px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;padding:12px 22px;border-radius:999px;transition:transform .2s,box-shadow .2s}
-.btn-white:hover{transform:translateY(-2px);box-shadow:0 10px 30px rgba(120,190,255,.35)}
-body.v-d .tools,body.v-d .guides,body.v-d .tuts{background:var(--bg)}
-body.v-d .tools{background:radial-gradient(ellipse 60% 35% at 50% 0%,rgba(40,120,220,.18),transparent 70%),var(--bg)}
-body.v-d .card,body.v-d .gcard,body.v-d .vcard{background:linear-gradient(160deg,rgba(24,64,112,.45),rgba(4,16,34,.85));box-shadow:none}
-body.v-d .chip{background:transparent}
-body.v-d .gact a{border-color:rgba(160,200,240,.25)}
-body.v-d footer{background:var(--bg)}
-@media (max-width:900px){
-  .links-d{display:none}
-  .s-left{left:22%;top:52%}.s-right{left:78%;top:52%}
-  .hero-foot{flex-direction:column;align-items:flex-start;gap:18px}
-}
-@media (max-width:560px){
-  .nav-d{padding:18px 16px}
-  .scene{--cy:34%;--O:120px}
-  .s-top{top:calc(34% - 118px)}
-  .s-left{left:20%;top:47%}.s-right{left:80%;top:47%}
-  .stat-d small{font-size:11px}.stat-d b{font-size:12px}
-  .hero-foot{padding:0 16px 32px}
-  .headline{font-size:clamp(38px,11vw,52px)}
-}
-
-/* ================= DESIGN E : SLIDES ================= */
-body.v-e{--accent:#27c4e6;--accent2:#8fe6f7}
-.hero-e{position:relative;height:100vh;height:100svh;min-height:600px;overflow:hidden;color:#fff;background:#05080d}
-.slides,.slide,.bg{position:absolute;inset:0}
-.slide{opacity:0;transition:opacity 1.1s ease;visibility:hidden}
-.slide.on{opacity:1;visibility:visible}
-.bg{background-size:cover;background-position:center}
-.bg.photo{background-size:auto 128%;background-position:55% 78%;filter:brightness(.62) contrast(1.08) saturate(1.1);transform:scale(1.08);transition:transform 7s ease-out}
-.slide.on .bg.photo{transform:scale(1)}
-.bg.studio{background:radial-gradient(ellipse 45% 55% at 64% 42%,rgba(90,120,150,.45),transparent 70%),radial-gradient(ellipse 80% 40% at 60% 100%,rgba(60,80,100,.5),transparent 70%),linear-gradient(180deg,#1a2129 0%,#0e1318 58%,#1b2127 58.2%,#0a0d11 100%)}
-.bg.studio.alt{background:radial-gradient(ellipse 40% 50% at 64% 45%,rgba(40,170,200,.28),transparent 70%),radial-gradient(ellipse 30% 40% at 72% 50%,rgba(220,60,140,.18),transparent 70%),linear-gradient(180deg,#141a22 0%,#0b0f15 58%,#161c23 58.2%,#07090c 100%)}
-.stage-e{position:absolute;left:55%;right:11%;bottom:36%;top:12%;display:flex;align-items:flex-end;justify-content:center;gap:2.5%}
-.stage-e img{display:block;max-height:100%;object-fit:contain;-webkit-box-reflect:below 2px linear-gradient(transparent 72%,rgba(255,255,255,.18));filter:drop-shadow(0 30px 40px rgba(0,0,0,.6));transform:translateY(24px);opacity:0;transition:transform 1.2s cubic-bezier(.2,.8,.2,1),opacity 1.2s}
-.slide.on .stage-e img{transform:none;opacity:1}
-.stage-e img{min-width:0;height:auto;max-width:100%}.stage-e.ref img{width:27%}.stage-e.ref img.hero-p{width:36%}
-.stage-e.ref img:nth-child(2){transition-delay:.12s}.stage-e.ref img:nth-child(3){transition-delay:.24s}
-.stage-e.snd img{width:100%;max-height:100%}
-.bg.studio.air{background:radial-gradient(ellipse 45% 55% at 66% 40%,rgba(120,190,230,.32),transparent 70%),linear-gradient(180deg,#18202a 0%,#0d1319 58%,#18202a 58.2%,#080b0f 100%)}
-.stage-e.wm img{width:29%}.stage-e.wm img.hero-p{width:34%}
-.stage-e.wm img:nth-child(2){transition-delay:.12s}.stage-e.wm img:nth-child(3){transition-delay:.24s}
-.stage-e.ac{flex-direction:column;align-items:center;justify-content:space-between;gap:6%}
-.stage-e.ac img.ac1{width:78%;-webkit-box-reflect:none;filter:drop-shadow(0 18px 30px rgba(0,0,0,.55))}
-.stage-e.ac img.ac2{width:72%;transition-delay:.15s}
-.stage-e.mon{bottom:38%;top:17%;left:55%;right:10%}.stage-e.mon img{width:100%;max-height:100%}
-.shade{position:absolute;inset:0;pointer-events:none;background:linear-gradient(90deg,rgba(4,7,11,.78) 0%,rgba(4,7,11,.35) 45%,rgba(4,7,11,.15) 70%,rgba(4,7,11,.45) 100%),linear-gradient(180deg,rgba(4,7,11,.55) 0%,transparent 22%,transparent 62%,rgba(4,7,11,.85) 100%)}
-.nav-e{position:absolute;z-index:6;top:0;left:0;right:0;display:flex;align-items:center;justify-content:space-between;padding:26px 4.5vw}
-.brand-e{display:flex;align-items:baseline;gap:8px;font-size:12px;font-weight:700;letter-spacing:.18em}
-.brand-e .wm{font-size:20px;letter-spacing:.01em}
-.brand-e .wm .tri{fill:var(--accent)}
-.links-e{display:flex;gap:56px;font-size:11px;font-weight:600;letter-spacing:.14em;text-transform:uppercase}
-.links-e a{opacity:.85;transition:opacity .2s,color .2s}.links-e a:hover{opacity:1;color:var(--accent)}
-.burger{display:grid;gap:5px;width:26px;padding:6px 0}
-.burger i{display:block;height:2px;background:#fff;border-radius:2px}.burger i:last-child{width:60%;justify-self:end}
-.copy-e{position:absolute;z-index:5;left:8vw;top:50%;transform:translateY(-58%)}
-.copy-e .cat{font-size:11px;font-weight:700;letter-spacing:.3em;text-transform:uppercase;color:var(--accent);margin-bottom:16px;min-height:1em;transition:opacity .4s}
-.copy-e h1{font-family:'Montserrat',sans-serif;font-weight:700;font-size:clamp(34px,4.6vw,68px);line-height:1.12;letter-spacing:.06em}
-.watch{margin-top:34px;display:flex;align-items:center;gap:16px;font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;width:max-content}
-.watch span{width:52px;height:52px;border-radius:50%;border:2px solid #fff;display:grid;place-items:center;transition:background .25s,color .25s}
-.watch:hover span{background:#fff;color:#05080d}
-.know{display:inline-block;margin-top:38px;background:var(--accent);color:#04202a;font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;padding:12px 26px;border-radius:3px;transition:filter .2s,transform .2s}
-.know:hover{filter:brightness(1.1);transform:translateY(-2px)}
-.info-e{position:absolute;z-index:5;right:7.5vw;top:66%;width:min(300px,26vw);padding:22px 22px 20px;background:rgba(40,48,58,.62);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-left:2px solid var(--accent)}
-.info-e h4{font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase}
-.info-e p{margin-top:12px;font-size:12.5px;line-height:1.65;opacity:.8}
-.info-e a{display:inline-block;margin-top:14px;font-size:10.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--accent)}
-.info-e.swap{animation:swap .6s ease}
-@keyframes swap{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
-.rail{position:absolute;z-index:5;right:3.2vw;top:50%;transform:translateY(-50%);display:flex;flex-direction:column;align-items:center;gap:14px;font-size:12px;font-weight:700}
-.track{position:relative;width:2px;height:min(34vh,260px);background:rgba(255,255,255,.25);display:flex;flex-direction:column}
-.track button{flex:1;border:0;background:transparent;cursor:pointer;width:18px;margin-left:-8px;position:relative}
-.track button::after{content:"";position:absolute;left:8px;top:0;bottom:0;width:2px;background:#fff;transform:scaleY(0);transform-origin:top;transition:transform .5s}
-.track button.on::after{transform:scaleY(1)}
-.foot-e{position:absolute;z-index:5;left:0;right:0;bottom:0;display:flex;justify-content:space-between;align-items:flex-end;padding:0 4.5vw 4.5vh 8vw}
-.soc{display:flex;gap:48px;font-size:10.5px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;opacity:.8}
-.soc a:hover{color:var(--accent)}
-.nums{display:flex;gap:clamp(30px,6vw,90px);margin-right:9vw}
-.nums a{display:grid;gap:4px}
-.nums b{font-size:clamp(24px,2.4vw,34px);font-weight:700;letter-spacing:.02em}
-.nums small{font-size:12px;opacity:.8}
-body.v-e .tools{background:radial-gradient(ellipse 60% 35% at 50% 0%,rgba(39,196,230,.12),transparent 70%),#070b10}
-body.v-e .guides,body.v-e .tuts,body.v-e footer{background:#070b10}
-body.v-e .card,body.v-e .gcard,body.v-e .vcard{background:linear-gradient(160deg,rgba(40,52,66,.55),rgba(10,14,20,.9));border-color:rgba(200,220,240,.12)}
-body.v-e .ico{background:#0f1a24;border-color:rgba(39,196,230,.5);box-shadow:0 0 16px rgba(39,196,230,.25)}
-@media (max-width:1000px){
-  .links-e{display:none}
-  .info-e{display:none}
-  .stage-e,.stage-e.mon{left:52%;right:8%;bottom:30%}
-  .nums{margin-right:0}
-}
-@media (max-width:640px){
-  .nav-e{padding:18px 16px}
-  .copy-e{left:16px;right:52px;top:auto;bottom:150px;transform:none}
-  .copy-e h1{font-size:clamp(28px,8.6vw,40px)}
-  .watch{margin-top:22px}.know{margin-top:22px}
-  .stage-e{left:8%;right:12%;top:11%;bottom:52%}
-  .bg.photo{background-size:auto 72%;background-position:28% 62%}
-  .stage-e.mon{top:14%;bottom:56%;left:8%;right:12%}
-  .shade{background:linear-gradient(180deg,rgba(4,7,11,.4) 0%,transparent 25%,rgba(4,7,11,.55) 50%,rgba(4,7,11,.95) 100%)}
-  .rail{right:14px;top:34%}
-  .track{height:120px}
-  .soc{display:none}
-  .foot-e{padding:0 16px 26px;justify-content:flex-start}
-  .nums{gap:34px}
-  .nums b{font-size:22px}.nums small{font-size:11px}
-}
-
-/* ---------- VaultSync brand ---------- */
-.vsw{font-weight:800;letter-spacing:.01em;color:#E8F1FF}
-.vsw b{font-weight:800;color:#6EC8FF}
-.brand-e{align-items:center!important;gap:12px!important;letter-spacing:0!important}
-.vs-icon{width:40px;height:40px;flex:none;filter:drop-shadow(0 4px 14px rgba(27,78,216,.55))}
+/* ===== Cover (tool picker) ===== */
+.cover{background:linear-gradient(160deg,var(--sam-navy) 0%,var(--sam-blue-dark) 55%,var(--sam-blue) 100%);color:#fff;padding:20px 24px 40px}
+.topbar{max-width:1080px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;gap:16px}
+.topbar .org{font-size:12px;color:var(--cover-faint);font-weight:600}
+.topbar nav{display:flex;gap:4px}
+.topbar nav a{font-size:13px;font-weight:600;color:var(--cover-ink);padding:10px 12px;border-radius:8px}
+.topbar nav a:hover{color:#fff;background:rgba(255,255,255,.08)}
+.lockup{display:flex;flex-direction:column;align-items:center;text-align:center;margin-top:28px}
+.lockrow{display:flex;align-items:center;gap:14px}
+.vs-icon{width:60px;height:60px;flex:none;filter:drop-shadow(0 8px 22px rgba(0,0,0,.35))}
 .vs-dial{animation:vsdial 26s linear infinite;transform-origin:0 0}
 @keyframes vsdial{0%{transform:rotate(0)}40%{transform:rotate(1080deg)}46%{transform:rotate(1080deg)}70%{transform:rotate(420deg)}76%{transform:rotate(420deg)}100%{transform:rotate(510deg)}}
-.vs-lock{display:grid;gap:3px;line-height:1}
-.vs-lock .vsw{font-size:22px;text-transform:none}
-.vs-lock small{font-size:8.5px;font-weight:700;letter-spacing:.22em;color:#9BB3D6;text-transform:uppercase;padding-top:4px;border-top:1px solid rgba(126,200,255,.35)}
-.head h2 .vsw{text-transform:uppercase;letter-spacing:.12em}
-.lockup-foot{display:block;width:min(420px,80vw);height:auto;margin:0 auto 18px;border-radius:14px;opacity:.95}
-@media (max-width:640px){.vs-icon{width:34px;height:34px}.vs-lock .vsw{font-size:19px}.vs-lock small{font-size:7px;letter-spacing:.16em}}
-@media (prefers-reduced-motion:reduce){.vs-dial{animation:none}}
+.wordmark{font-family:var(--font-head);font-weight:800;font-size:clamp(34px,5vw,46px);letter-spacing:-.01em;line-height:1}
+.wordmark b{font-weight:800;background:linear-gradient(160deg,#7FD8FF 0%,var(--accent) 100%);-webkit-background-clip:text;background-clip:text;color:transparent}
+.tagline{font-size:12.5px;letter-spacing:.16em;color:var(--cover-ink);font-weight:700;margin-top:12px;text-transform:uppercase}
+.divider{width:44px;height:3px;background:linear-gradient(90deg,var(--accent),#7FD8FF);border-radius:2px;margin:13px auto 18px}
+.lead{color:var(--cover-ink);font-size:15px;max-width:540px}
+.choose{font-family:var(--font-head);font-size:14px;font-weight:700;margin:26px 0 12px;text-align:center}
+.tools{max-width:1080px;margin:0 auto;display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.tool{display:flex;flex-direction:column;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.16);border-radius:14px;padding:20px 18px;color:#fff;transition:transform .15s ease,background .15s ease,border-color .15s ease;backdrop-filter:blur(6px)}
+.tool:hover{background:rgba(255,255,255,.12);border-color:rgba(255,255,255,.35);transform:translateY(-3px)}
+.tool .ic{width:34px;height:34px;margin-bottom:12px}
+.tool .tx{flex:1;display:flex;flex-direction:column}
+.tool h3{font-size:16px;margin-bottom:5px}
+.tool p{font-size:12.5px;color:var(--cover-ink);flex:1}
+.tool .go{margin-top:14px;font-size:12.5px;font-weight:700;display:flex;justify-content:space-between;align-items:center}
+.soon{display:flex;justify-content:center;gap:10px;margin-top:14px;flex-wrap:wrap}
+.soon span{font-size:12px;color:var(--cover-ink);border:1px solid rgba(255,255,255,.16);border-radius:999px;padding:7px 14px;display:flex;gap:8px;align-items:center}
+.soon i{font-style:normal;font-size:10.5px;font-weight:700;padding:1px 8px;border-radius:20px;background:rgba(255,255,255,.12)}
 
-/* ================= PROFESSIONAL (toned-down) ================= */
-body.v-e{--accent:#4AA6FF;--accent2:#8CC8FF;font-family:'Inter',system-ui,-apple-system,'Segoe UI',sans-serif;letter-spacing:0}
-body.v-e .hero-e{font-family:'Inter',system-ui,sans-serif}
-body.v-e .particles{display:none}
-.copy-e .cat{font-size:12px;font-weight:600;letter-spacing:.08em;color:var(--accent2)}
-.copy-e h1{font-family:'Inter',system-ui,sans-serif;font-weight:700;font-size:clamp(34px,4.2vw,60px);line-height:1.08;letter-spacing:-.02em}
-.watch{font-size:13px;font-weight:600;letter-spacing:0;text-transform:none;margin-top:30px}
-.watch span{width:44px;height:44px;border-width:1.5px}
-.know{margin-top:28px;background:#fff;color:#0a1a33;font-size:13px;font-weight:600;letter-spacing:0;text-transform:none;padding:12px 22px;border-radius:8px}
-.links-e{font-size:13px;font-weight:500;letter-spacing:0;text-transform:none;gap:36px}
-.nav-cta{font-size:13px;font-weight:600;padding:9px 16px;border-radius:8px;border:1px solid rgba(255,255,255,.3);transition:background .2s}
-.nav-cta:hover{background:rgba(255,255,255,.1)}
-.info-e{border-left:0;border:1px solid rgba(255,255,255,.12);border-radius:12px;background:rgba(15,22,32,.72)}
-.info-e h4{font-size:14px;font-weight:600;letter-spacing:0;text-transform:none}
-.info-e p{font-size:13px}
-.info-e a{font-size:12.5px;font-weight:600;letter-spacing:0;text-transform:none}
-.rail{font-weight:600;font-size:11px;opacity:.8}
-.soc{font-size:12px;font-weight:500;letter-spacing:0;text-transform:none;opacity:.65}
-.nums b{font-size:clamp(22px,2vw,28px);font-weight:600}
-.nums small{font-size:12px;opacity:.65}
-body.v-e .eyebrow{font-size:12px;font-weight:600;letter-spacing:.08em;color:var(--accent)}
-body.v-e .head h2{font-family:'Inter',system-ui,sans-serif;font-size:clamp(26px,3vw,36px);font-weight:700;letter-spacing:-.015em;text-transform:none}
-body.v-e .head p{font-size:14.5px}
-body.v-e .card{min-height:0;border-radius:14px;padding:24px 22px 20px}
-body.v-e .card::before{display:none}
-body.v-e .card:hover{transform:translateY(-3px);box-shadow:0 12px 30px rgba(0,0,0,.35)}
-body.v-e .num{display:none}
-body.v-e .ico{margin:0 0 16px;width:44px;height:44px;border-radius:10px;background:rgba(74,166,255,.12);border:1px solid rgba(74,166,255,.3);box-shadow:none;color:var(--accent2)}
-body.v-e .card h3,body.v-e .gbody h3,body.v-e .vbody h3{font-family:'Inter',system-ui,sans-serif;font-size:16.5px;font-weight:600;letter-spacing:-.005em;text-transform:none}
-body.v-e .card p{font-size:13.5px}
-body.v-e .tags span{font-size:11px;font-weight:500;letter-spacing:0;text-transform:none;border-radius:6px}
-body.v-e .open{font-size:13px;font-weight:600;letter-spacing:0;text-transform:none}
-body.v-e .chip{font-size:12.5px;font-weight:500;letter-spacing:0;text-transform:none;border-radius:8px;padding:8px 14px}
-body.v-e .gcard,body.v-e .vcard{border-radius:14px}
-body.v-e .gcard:hover,body.v-e .vcard:hover{transform:translateY(-3px)}
-body.v-e .gbody .num{display:block;font-size:11.5px;font-weight:600;letter-spacing:.06em}
-body.v-e .gact a{font-size:12.5px;font-weight:600;letter-spacing:0;text-transform:none;border-radius:8px}
-body.v-e .gact a.view{background:var(--accent);border-color:var(--accent)}
-body.v-e .gcover .badge,body.v-e .thumb .fmt{font-size:10.5px;font-weight:600;letter-spacing:.04em;border-radius:6px}
-body.v-e .thumb .pbtn{width:56px;height:56px;background:rgba(255,255,255,.95);color:#0a1a33;box-shadow:0 8px 24px rgba(0,0,0,.35)}
-.collab{background:#070b10;padding:10px 6vw 60px}
-.collab-in{max-width:880px;margin:0 auto;display:flex;align-items:center;gap:18px;padding:22px 26px;border:1px solid rgba(255,255,255,.1);border-radius:14px;background:rgba(255,255,255,.03)}
-.collab-in p{font-size:14.5px;line-height:1.6;color:#b9c6d6}
-.collab-in b{color:#fff;font-weight:600}
-.vs-icon.big{width:44px;height:44px}
-body.v-e footer{font-size:12px;letter-spacing:0;text-transform:none}
-@media (max-width:640px){.soc{display:none}.collab{padding:0 16px 40px}.collab-in{padding:18px}.nav-cta{padding:7px 12px;font-size:12px}}
-footer{padding:32px 6vw;border-top:1px solid var(--line);display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-size:11px;letter-spacing:1.5px;color:var(--muted);text-transform:uppercase}
+/* ===== Content ===== */
+main{max-width:1080px;margin:0 auto;padding:30px 24px 8px}
+.sec{margin-bottom:28px;scroll-margin-top:16px}
+.sec-head{display:flex;justify-content:space-between;align-items:flex-end;gap:12px;flex-wrap:wrap;margin-bottom:12px}
+.sec-head h2{font-size:19px}
+.sec-head p{color:var(--ink-soft);font-size:13px}
+.card{background:var(--surface);border-radius:var(--radius);box-shadow:var(--shadow)}
+.tabs{display:flex;gap:2px;border-bottom:1px solid var(--g2);margin-bottom:12px;overflow-x:auto;scrollbar-width:none}
+.tabs::-webkit-scrollbar{display:none}
+.tab{background:none;border:0;padding:12px 14px;font-size:13px;font-weight:600;color:var(--ink-soft);border-bottom:2.5px solid transparent;white-space:nowrap;min-height:44px}
+.tab:hover{color:var(--ink)}
+.tab[aria-pressed="true"]{color:var(--accent);border-color:var(--accent)}
+.tab .n{font-size:11px;color:var(--g3);margin-left:4px;font-weight:600}
+.tab[aria-pressed="true"] .n{color:var(--accent)}
+.row{display:grid;grid-template-columns:52px 1fr auto;gap:14px;align-items:center;padding:12px 16px;border-bottom:1px solid var(--g2)}
+.row:last-child{border-bottom:0}
+.thumb{width:52px;height:38px;border-radius:5px;background:#0b1a3a center/cover no-repeat;border:1px solid var(--g2)}
+.thumb.portrait{background-size:contain;background-color:#eef3fa}
+.r-title{font-weight:600;font-size:13.5px;line-height:1.3}
+.r-meta{font-size:12px;color:var(--ink-soft);margin-top:3px;display:flex;gap:6px 8px;flex-wrap:wrap;align-items:center}
+.pill{display:inline-block;padding:1.5px 8px;border-radius:20px;font-size:10.5px;font-weight:700;line-height:1.5}
+.pill.new{background:var(--info-bg);color:var(--info)}
+.pill.bu{background:var(--g1);color:var(--ink-soft)}
+.r-act{display:flex;gap:8px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:6px;font-size:12.5px;font-weight:700;border-radius:7px;padding:9px 14px;min-height:40px;border:1px solid var(--g2);background:#fff;color:var(--ink);white-space:nowrap}
+.btn:hover{border-color:var(--g3)}
+.btn.primary{background:var(--accent);border-color:var(--accent);color:#fff}
+.btn.primary:hover{background:var(--accent-dark);border-color:var(--accent-dark)}
+.btn svg{width:15px;height:15px}
+.fold{display:flex;width:100%;justify-content:space-between;align-items:center;gap:12px;padding:13px 16px;border:0;border-top:1px solid var(--g2);background:#FAFBFC;color:var(--ink-soft);font-size:13px;font-weight:600;text-align:left;min-height:46px}
+.fold:hover{color:var(--ink)}
+.fold:last-child{border-radius:0 0 var(--radius) var(--radius)}
+.fold .chev{transition:transform .2s;flex:none}
+.fold[aria-expanded="true"] .chev{transform:rotate(180deg)}
+.prev-list{border-top:1px solid var(--g2)}
+.prev-list .row{background:#FCFCFD}
+.prev-list .thumb{filter:grayscale(.4);opacity:.85}
+.empty{padding:22px 16px;color:var(--ink-soft);font-size:13px;text-align:center}
 
+/* Tutorials */
+.tut-toggle{display:flex;width:100%;align-items:center;gap:14px;padding:14px 16px;border:0;background:#fff;border-radius:var(--radius);box-shadow:var(--shadow);text-align:left;min-height:56px;color:var(--ink)}
+.tut-toggle[aria-expanded="true"]{border-radius:var(--radius) var(--radius) 0 0;border-bottom:1px solid var(--g2)}
+.tut-toggle .ico{width:36px;height:36px;border-radius:9px;background:var(--info-bg);color:var(--info);display:grid;place-items:center;flex:none}
+.tut-toggle .t1{font-family:var(--font-head);font-weight:700;font-size:15px}
+.tut-toggle .t2{font-size:12.5px;color:var(--ink-soft)}
+.tut-toggle .chev{margin-left:auto;color:var(--ink-soft);transition:transform .2s;flex:none}
+.tut-toggle[aria-expanded="true"] .chev{transform:rotate(180deg)}
+.tut-wrap{background:#fff;border-radius:0 0 var(--radius) var(--radius);box-shadow:var(--shadow);padding:16px}
+.vids{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.vid{display:flex;flex-direction:column;border:1px solid var(--g2);border-radius:var(--radius);overflow:hidden;background:#fff;padding:0;text-align:left;color:inherit}
+.vid:hover{border-color:var(--g3)}
+.vth{position:relative;display:grid;place-items:center;aspect-ratio:16/9;background:#0b1a3a center/cover no-repeat}
+.vth .pb{width:44px;height:44px;border-radius:50%;background:rgba(255,255,255,.95);display:grid;place-items:center;color:var(--ink);box-shadow:0 6px 18px rgba(0,0,0,.3)}
+.vth .dur{position:absolute;right:8px;bottom:8px;background:rgba(10,14,30,.82);color:#fff;font-size:11px;font-weight:700;padding:2px 7px;border-radius:5px}
+.vb{display:block;padding:12px 14px 14px}
+.vb .vt{display:block;font-size:14px;font-weight:600}
+.vb .vd{display:block;font-size:12px;color:var(--ink-soft);margin-top:3px}
 
-/* ---------- RESPONSIVE ---------- */
-@media (max-width:900px){
-  .links{display:none}
-  .portal{left:70%;width:52vw}.fog{left:70%}
-  .stats{grid-template-columns:repeat(3,1fr)}
-  .play{grid-column:1/-1;border-top:1px solid var(--line);border-right:none}
-  .foot-tag{display:none}
-  .stage-c{grid-template-columns:1fr;text-align:center;padding-top:10px}
-  .copy-c p{margin-left:auto;margin-right:auto}
-  .copy-c .btns{justify-content:center}
-  .hero-c .orbit{--S:min(420px,70vw);margin-top:30px}
+/* Video modal */
+.modal{position:fixed;inset:0;z-index:80;display:none;align-items:center;justify-content:center;padding:16px;background:rgba(10,14,39,.86)}
+.modal.open{display:flex}
+.mbox{display:flex;flex-direction:column;align-items:center;gap:12px;max-width:100%}
+.mbox video{display:block;max-width:min(1100px,100%);max-height:calc(100vh - 120px);border-radius:12px;background:#000}
+.mbox h4{margin:0;color:#fff;font-size:14px;font-weight:600;text-align:center}
+.mclose{position:fixed;top:14px;right:14px;width:44px;height:44px;border-radius:50%;border:1px solid rgba(255,255,255,.4);background:rgba(10,14,39,.6);color:#fff;font-size:22px;line-height:1}
+
+footer{max-width:1080px;margin:0 auto;padding:18px 24px 30px;border-top:1px solid var(--g2);display:flex;justify-content:space-between;gap:8px 16px;flex-wrap:wrap;color:var(--ink-soft);font-size:12px}
+footer .ver{color:var(--g3)}
+
+/* ===== Tablet / phone ===== */
+@media (max-width:900px){ .tools{grid-template-columns:repeat(2,1fr)} }
+@media (max-width:600px){
+  .cover{padding:14px 16px 32px}
+  .topbar nav{display:none}
+  .lockup{margin-top:20px}
+  .vs-icon{width:46px;height:46px}
+  .tagline{font-size:10.5px;letter-spacing:.12em}
+  .lead{font-size:14px}
+  .choose{margin:20px 0 10px}
+  .tools{grid-template-columns:1fr;gap:10px}
+  .tool{flex-direction:row;align-items:center;gap:14px;padding:14px;min-height:64px}
+  .tool:hover{transform:none}
+  .tool .ic{margin:0;width:28px;height:28px;flex:none}
+  .tool p{font-size:12px}
+  .tool .go{margin:0}
+  .tool .go .lbl{display:none}
+  main{padding:24px 16px 6px}
+  .row{grid-template-columns:42px 1fr auto;gap:12px;padding:12px 14px}
+  .thumb{width:42px;height:32px}
+  .r-act{gap:6px}
+  .r-act .btn{padding:9px 11px}
+  .r-act .btn .lbl-dl{display:none}
+  .vids{grid-template-columns:1fr;gap:10px}
+  .vid{display:grid;grid-template-columns:128px 1fr}
+  .vth{aspect-ratio:auto;min-height:84px}
+  .vth .pb{width:36px;height:36px}
+  footer{padding:16px 16px 28px}
 }
-@media (max-width:560px){
-  nav{padding:18px 16px}
-  .btn-outline{padding:9px 12px;letter-spacing:1.5px}
-  .stage-a{padding:0 16px}
-  .pre{letter-spacing:.4em}
-  .title-a .wm{gap:.08em}
-  .portal{left:66%;width:64vw}
-  .copy-a .tagline{letter-spacing:.2em;line-height:1.8}
-  .stat{padding:16px 6px}
-  .orbit{--S:70vw}
-  .center .btn-solid{display:none}
-  .center .tagline{font-size:9px;letter-spacing:.16em}
-  .tools{padding:80px 16px 60px}
-  .grid{grid-template-columns:1fr}
-  footer{padding:24px 16px 80px}
+@media (prefers-reduced-motion:reduce){
+  *{animation:none!important;transition:none!important}
+  html{scroll-behavior:auto}
 }
-@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
 </style>
 </head>
-<body class="v-d v-e">
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<!-- Brand icon (used by the cover lockup) -->
 <svg width="0" height="0" style="position:absolute" aria-hidden="true"><symbol id="vsIconSym" viewBox="0 0 248 248"><defs><linearGradient id="vsT" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#1B4ED8"/><stop offset=".55" stop-color="#1236B0"/><stop offset="1" stop-color="#0A1F6A"/></linearGradient><linearGradient id="vsS" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#6EA8FF" stop-opacity=".32"/><stop offset=".48" stop-color="#6EA8FF" stop-opacity="0"/></linearGradient><linearGradient id="vsC" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#E8F6FF"/><stop offset=".5" stop-color="#7EC8FF"/><stop offset="1" stop-color="#4AA6FF"/></linearGradient></defs><rect width="248" height="248" rx="54" fill="url(#vsT)"/><rect width="248" height="248" rx="54" fill="url(#vsS)"/><rect x="6" y="6" width="236" height="236" rx="48" fill="none" stroke="#7EB6FF" stroke-opacity=".28" stroke-width="2"/><g transform="translate(124,124)" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M-52 -28 A62 62 0 0 1 50 -46" stroke="url(#vsC)" stroke-width="16"/><path d="M52 28 A62 62 0 0 1 -50 46" stroke="url(#vsC)" stroke-width="16"/><path d="M-64 -18 L-52 -42 L-30 -28" fill="#9FD4FF" stroke="none"/><path d="M64 18 L52 42 L30 28" fill="#9FD4FF" stroke="none"/><circle r="44" stroke="#D7ECFF" stroke-width="6"/><g class="vs-dial"><circle r="27" stroke="#7EC8FF" stroke-width="5"/><circle r="9" fill="#F4FBFF" stroke="none"/><g stroke="#B9E0FF" stroke-width="4"><path d="M0 -40 v10"/><path d="M0 30 v10"/><path d="M-40 0 h10"/><path d="M30 0 h10"/><path d="M-28 -28 l8 8"/><path d="M20 20 l8 8"/><path d="M20 -28 l-8 8"/><path d="M-28 20 l8 8"/></g></g></g></symbol></svg>
 
-<!-- reusable wordmark -->
-<template id="wmTpl"><span class="vsw">Vault<b>Sync</b></span></template>
-
-<header class="hero-e" id="home">
-  <div class="slides" id="slides">
-    <div class="slide on" data-i="0">
-      <div class="bg photo" style="background-image:url('images/tv-showroom.jpg')"></div>
-    </div>
-    <div class="slide" data-i="1">
-      <div class="bg studio"></div>
-      <div class="stage-e ref">
-        <img src="images/ref-bespoke-navy.webp" alt="Samsung Bespoke AI top mount refrigerator in navy">
-        <img src="images/ref-french-door.webp" alt="Samsung French door refrigerator" class="hero-p">
-        <img src="images/ref-bespoke-pink.webp" alt="Samsung Bespoke AI top mount refrigerator in pink">
-      </div>
-    </div>
-    <div class="slide" data-i="2">
-      <div class="bg studio alt"></div>
-      <div class="stage-e snd"><img src="images/sound-tower.webp" alt="Samsung Sound Tower speakers"></div>
-    </div>
-    <div class="slide" data-i="3">
-      <div class="bg studio"></div>
-      <div class="stage-e mon"><img src="images/odyssey-g5.webp" alt="Samsung Odyssey G5 gaming monitor"></div>
-    </div>
-    <div class="slide" data-i="4">
-      <div class="bg studio air"></div>
-      <div class="stage-e ac">
-        <img src="images/ac-windfree-1way.webp" alt="Samsung WindFree 1Way Cassette air conditioner" class="ac1">
-        <img src="images/ac-window-type.webp" alt="Samsung window-type air conditioner" class="ac2">
-      </div>
-    </div>
-    <div class="slide" data-i="5">
-      <div class="bg studio"></div>
-      <div class="stage-e wm">
-        <img src="images/wm-wd10-front-load.webp" alt="Samsung WD10 front load washer-dryer combo">
-        <img src="images/wm-bespoke-ai-laundry.webp" alt="Samsung Bespoke AI Laundry Combo" class="hero-p">
-        <img src="images/wm-wa40-top-load.webp" alt="Samsung WA40 top load washing machine">
-      </div>
-    </div>
+<header class="cover" id="top">
+  <div class="topbar">
+    <span class="org">SEPCO Shop Enhancement · RMAS</span>
+    <nav aria-label="Sections"><a href="#guides">Merch Guides</a><a href="#tutorials">Tutorials</a></nav>
   </div>
-  <div class="shade"></div>
-
-  <nav class="nav-e">
-    <a href="#home" class="brand-e" aria-label="VaultSync home"><svg class="vs-icon" viewBox="0 0 248 248" aria-hidden="true"><use href="#vsIconSym"/></svg><span class="vs-lock"><span class="vsw">Vault<b>Sync</b></span><small>Smart POSM Inventory Solutions</small></span></a>
-    <div class="links-e"><a href="#home">Home</a><a href="#tools">Tools</a><a href="#guides">Merch Guides</a><a href="#tutorials">Tutorials</a></div>
-    <a href="#tools" class="nav-cta">Open tools</a>
-  </nav>
-
-  <div class="copy-e">
-    <div class="cat" id="ecat">TV &amp; Sound Device</div>
-    <h1>Smart POSM<br>inventory solutions</h1>
-    <a href="#tutorials" class="watch"><span><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span>Watch tutorials</a>
-    <a href="#tools" class="know">Explore tools</a>
-  </div>
-
-  <aside class="info-e" id="einfo"></aside>
-
-  <div class="rail" aria-label="Slides">
-    <span id="enow">01</span>
-    <div class="track" id="etrack"></div>
-    <span id="etotal">04</span>
-  </div>
-
-  <div class="foot-e">
-    <div class="soc">In collaboration with SEPCO Shop Enhancement Team &amp; RMAS Team</div>
-    <div class="nums">
-      <a href="#tools"><b>6</b><small>Tools</small></a>
-      <a href="#guides"><b>10</b><small>Merch Guides</small></a>
-      <a href="#tutorials"><b>3</b><small>Tutorials</small></a>
+  <div class="lockup">
+    <div class="lockrow">
+      <svg class="vs-icon" viewBox="0 0 248 248" aria-hidden="true"><use href="#vsIconSym"/></svg>
+      <h1 class="wordmark">Vault<b>Sync</b></h1>
     </div>
+    <div class="tagline">Smart POSM Inventory Solutions</div>
+    <div class="divider" aria-hidden="true"></div>
+    <p class="lead">Manage POSM stock, requests and store execution — plus the latest merchandising guides — in one place.</p>
   </div>
+  <h2 class="choose" id="tools">Choose a tool</h2>
+  <div class="tools" id="toolGrid"></div>
+  <div class="soon" id="soonList"></div>
 </header>
 
-<section class="tools" id="tools">
-  <div class="head">
-    <div>
-      <div class="eyebrow">Tools</div>
-      <h2>Choose a tool</h2>
+<main id="main">
+  <section class="sec" id="guides" aria-labelledby="guidesTitle">
+    <div class="sec-head">
+      <h2 id="guidesTitle">Merchandising Guides</h2>
+      <p id="guidesSub"></p>
     </div>
-    <p>Tap a tool to open it in a new tab. All tools share the same Google Sheets backend, so your data stays in sync on every device.</p>
-  </div>
-  <div class="grid" id="grid"></div>
-</section>
+    <div class="tabs" id="guideTabs" role="group" aria-label="Filter guides by business unit"></div>
+    <div class="card" id="guideCard"></div>
+  </section>
 
-<section class="guides" id="guides">
-  <div class="head">
-    <div>
-      <div class="eyebrow">Reference</div>
-      <h2>CE Merchandising Guide</h2>
-    </div>
-    <p>Official merchandising guides for display and POSM execution. Tap View to open in your browser, or Download to keep a copy on your phone.</p>
-  </div>
-  <div class="chips" id="gchips"></div>
-  <div class="ggrid" id="ggrid"></div>
-</section>
+  <section class="sec" id="tutorials" aria-label="Tutorials">
+    <button class="tut-toggle" id="tutToggle" type="button" aria-expanded="false" aria-controls="tutWrap">
+      <span class="ico" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span>
+      <span><span class="t1">Tutorials</span><br><span class="t2" id="tutSummary"></span></span>
+      <svg class="chev" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+    </button>
+    <div class="tut-wrap" id="tutWrap" hidden><div class="vids" id="vidGrid"></div></div>
+  </section>
+</main>
 
-<section class="tuts" id="tutorials">
-  <div class="head">
-    <div>
-      <div class="eyebrow">Training</div>
-      <h2>Tutorials</h2>
-    </div>
-    <p>Short training videos for the team. Tap a video to play it — start with installation, then learn the Inventory Tool.</p>
-  </div>
-  <div class="vgrid" id="vgrid"></div>
-</section>
-
-<div class="modal" id="modal" role="dialog" aria-modal="true" aria-label="Tutorial video">
+<div class="modal" id="modal" role="dialog" aria-modal="true" aria-labelledby="mTitle">
   <div class="mbox">
-    <button class="mclose" id="mclose" aria-label="Close video">×</button>
+    <button class="mclose" id="mClose" type="button" aria-label="Close video">×</button>
     <video id="player" controls playsinline preload="metadata"></video>
-    <h4 id="mtitle"></h4>
+    <h4 id="mTitle"></h4>
   </div>
 </div>
 
-<section class="collab" aria-label="Project credits">
-  <div class="collab-in">
-    <svg class="vs-icon big" viewBox="0 0 248 248" aria-hidden="true"><use href="#vsIconSym"/></svg>
-    <p>This project was developed in collaboration with <b>SEPCO Shop Enhancement Team</b> and <b>RMAS Team</b>.</p>
-  </div>
-</section>
 <footer>
-  <span>© <span id="yr"></span> VaultSync · Smart POSM Inventory Solutions</span>
-  <span>SEPCO Shop Enhancement Team · RMAS Team</span>
+  <span>VaultSync · by SEPCO Shop Enhancement Team &amp; RMAS Team</span>
+  <span id="footMeta"></span>
 </footer>
-
 
 <script>
 /* =====================================================================
-   TOOL LINKS — paste each tool's GitHub Pages URL in "url".
-   Empty url = card shows "Coming soon".
+   VAULTSYNC DATA — the only part you normally edit.
+   Counts, tabs, "New" sorting and "Previous editions" are worked out
+   from these lists automatically.
    ===================================================================== */
-const LINKS = {
-  inventory: "https://samsung-ce.github.io/RMAS-APPLICATION-MOBILE/",   // ← POSM Inventory Tool
-  request:   "https://samsung-ce.github.io/RMAS-REQUEST-FORM/",   // ← POSM Request Form
-  audit:     "",   // ← POSM Display Audit
-  scorecard: "https://samsung-ce.github.io/TS-GRADING/"    // ← TS Performance Scorecard
+const SITE = {
+  updated: "Oct 6, 2026",   // ← change whenever you update guides or tools
+  version: "v2.0.0"
 };
 
-const ICONS = {
-  warehouse:'<path d="M3 21V9l9-5 9 5v12"/><path d="M7 21v-7h10v7"/><path d="M10 17h4"/>',
-  store:'<path d="M4 10v10h16V10"/><path d="M3 5h18l-1 5a2.5 2.5 0 0 1-5 0 2.5 2.5 0 0 1-5 0 2.5 2.5 0 0 1-5 0z"/><path d="M10 20v-5h4v5"/>',
-  exec:'<rect x="5" y="4" width="14" height="17" rx="2"/><path d="M9 4V3h6v1"/><path d="M8.5 10l1.5 1.5 3-3M8.5 16l1.5 1.5 3-3"/>',
-  truck:'<path d="M2 6h11v10H2z"/><path d="M13 9h4l4 4v3h-8"/><circle cx="6" cy="18" r="2"/><circle cx="17" cy="18" r="2"/>',
-  box:'<path d="M3 7l9-4 9 4-9 4-9-4z"/><path d="M3 7v10l9 4 9-4V7"/><path d="M12 11v10"/>',
-  chart:'<path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/>',
-  book:'<path d="M4 5a2 2 0 0 1 2-2h13v16H6a2 2 0 0 0-2 2z"/><path d="M4 21V5"/><path d="M8 7h7M8 11h5"/>',
-  pie:'<circle cx="12" cy="12" r="9"/><path d="M12 3v9l6.4 6.4"/>'
-};
-
+/* status: "live" (card opens url) · "soon" (shown as a Coming soon chip)
+   external: true → link leaves VaultSync (e.g. Google Drive); shows ↗ */
 const TOOLS = [
-  {id:"inv",  name:"POSM Inventory Tool",      url:LINKS.inventory, icon:"box",
-   desc:"Warehouse stock, barcode stock in/out, transfers, request status and movement analytics.", tags:["Dashboard","Barcode","Admin"]},
-  {id:"req",  name:"POSM Request Form",        url:LINKS.request, icon:"store",
-   desc:"Shop-style request form for stores and Trade Supervisors — add POSM to cart and submit in one go.", tags:["Mobile","Cart","Requests"]},
-  {id:"aud",  name:"POSM Display Audit",       url:LINKS.audit, icon:"exec",
-   desc:"Store visit audit for leaders: camera-only photos plus complete, outdated, damaged and clean checks.", tags:["Camera","Store Visit","Scoring"]},
-  {id:"ts",   name:"TS Performance Scorecard", url:LINKS.scorecard, icon:"chart",
-   desc:"Monthly Trade Supervisor scorecard on Reporting, Execution and Communication, per BU and overall.", tags:["Monthly","Per BU","Ranking"]},
-  {id:"mg",   name:"CE Merchandising Guide",   url:"#guides", icon:"book",
-   desc:"Official merchandising guides for TV, Sound Device, Display, Refrigerator, Air Conditioner and Washing Machine — POSM placement and display standards.", tags:["TV / SD / DS","REF","AC","WM"]},
-  {id:"exa",  name:"Execution Analytics",      url:"https://drive.google.com/drive/folders/1NQLRVrS4uuNL1zwDpdtPzVKTjHJ8dwhy", icon:"pie",
-   desc:"SPOP, TV BG and SB execution analytics — display compliance across regions and stores.", tags:["SPOP","TV BG","SB"]}
+  {name:"POSM Inventory",      desc:"Warehouse stock, scan in/out, transfers and requests", icon:"box",   status:"live", url:"https://samsung-ce.github.io/RMAS-APPLICATION-MOBILE/"},
+  {name:"POSM Request Form",   desc:"Stores and TS request POSM in one submission",         icon:"store", status:"live", url:"https://samsung-ce.github.io/RMAS-REQUEST-FORM/"},
+  {name:"TS Scorecard",        desc:"Monthly Trade Supervisor grading per BU",              icon:"chart", status:"live", url:"https://samsung-ce.github.io/TS-GRADING/"},
+  {name:"Execution Analytics", desc:"SPOP, TV BG and SB compliance · Google Drive",         icon:"pie",   status:"live", external:true, url:"https://drive.google.com/drive/folders/1NQLRVrS4uuNL1zwDpdtPzVKTjHJ8dwhy"},
+  {name:"POSM Display Audit",  desc:"Store visit audit for leaders",                        icon:"exec",  status:"soon", url:""}
 ];
 
-/* the 5 steps of the cycle, each pointing to a tool */
-const CYCLE = [
-  {label:"Warehouse",  icon:"warehouse", tool:"inv", angle:-90},
-  {label:"Stores",     icon:"store",     tool:"req", angle:-18},
-  {label:"Execution",  icon:"exec",      tool:"aud", angle:54},
-  {label:"Deployment", icon:"truck",     tool:"req", angle:126},
-  {label:"Inventory",  icon:"box",       tool:"inv", angle:198}
-];
-
-const svgI = (k,sw=1.8) => `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="${sw}" stroke-linecap="round" stroke-linejoin="round">${ICONS[k]}</svg>`;
-const arrow = '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 12h14M13 6l6 6-6 6"/></svg>';
-
-/* wordmarks */
-const wmHTML = document.getElementById('wmTpl').innerHTML;
-document.querySelectorAll('[data-wm]').forEach(el => el.outerHTML = wmHTML);
-
-/* stats bars */
-document.querySelectorAll('[data-stats]').forEach(el => el.innerHTML = `
-  <div class="stat"><b>${TOOLS.length}</b><small>Tools</small></div>
-  <div class="stat"><b>24/7</b><small>Cloud Sync</small></div>
-  <div class="stat"><b>100%</b><small>Mobile Ready</small></div>
-  <a class="play" href="#tutorials"><i><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M7 4v16l13-8z"/></svg></i>Watch Tutorials</a>
-  <div class="foot-tag">Samsung · RMAS CE</div>`);
-
-/* orbits */
-document.querySelectorAll('[data-orbit]').forEach((orb, oi) => {
-  const ring = `<svg class="ring" viewBox="0 0 200 200" aria-hidden="true">
-    <defs><linearGradient id="flowGrad${oi}" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#8fd0ff"/><stop offset="1" stop-color="#1f6fff"/></linearGradient></defs>
-    <circle class="track" cx="100" cy="100" r="100"/>
-    <circle class="flow" cx="100" cy="100" r="100" style="stroke:url(#flowGrad${oi})"/>
-    <circle class="flow" cx="100" cy="100" r="100" style="stroke:url(#flowGrad${oi});animation-delay:-3s"/>
-  </svg>`;
-  orb.insertAdjacentHTML('afterbegin', ring);
-  CYCLE.forEach(c => {
-    const a = c.angle * Math.PI/180;
-    const n = document.createElement('a');
-    n.className = 'node' + (c.angle === -90 ? ' lbl-top' : '');
-    n.style.left = (50 + 50*Math.cos(a)) + '%';
-    n.style.top  = (50 + 50*Math.sin(a)) + '%';
-    n.href = '#tools';
-    n.title = TOOLS.find(t => t.id === c.tool).name;
-    n.innerHTML = `<i>${svgI(c.icon)}</i><span>${c.label}</span>`;
-    n.addEventListener('click', e => openTool(c.tool, e));
-    orb.appendChild(n);
-  });
-});
-
-function openTool(id, e){
-  const t = TOOLS.find(x => x.id === id);
-  if (t && t.url){ e.preventDefault(); window.open(t.url, '_blank', 'noopener'); return; }
-  setTimeout(() => { const c = document.getElementById('card-'+id); if(c){ c.classList.remove('flash'); void c.offsetWidth; c.classList.add('flash'); } }, 500);
-}
-
-/* tool cards */
-const grid = document.getElementById('grid');
-TOOLS.forEach((t, i) => {
-  const live = !!t.url;
-  const el = document.createElement(live ? 'a' : 'div');
-  el.className = 'card' + (live ? '' : ' soon');
-  el.id = 'card-' + t.id;
-  if (live){ el.href = t.url; if (!t.url.startsWith('#')){ el.target = '_blank'; el.rel = 'noopener'; } }
-  el.innerHTML = `<span class="num">${String(i+1).padStart(2,'0')}</span>
-    <div class="ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">${ICONS[t.icon]}</svg></div>
-    <h3>${t.name}</h3><p>${t.desc}</p>
-    <div class="tags">${t.tags.map(x=>`<span>${x}</span>`).join('')}</div>
-    <div class="open">${live ? (t.url.startsWith('#') ? 'View guides ' : 'Open tool ')+arrow : 'Coming soon'}</div>`;
-  grid.appendChild(el);
-});
-
-
-/* particles */
-document.querySelectorAll('.particles').forEach(pc => {
-  for (let i = 0; i < 36; i++){
-    const d = document.createElement('span'); d.className = 'dot';
-    d.style.left = (10 + Math.random()*80) + '%'; d.style.top = (40 + Math.random()*55) + '%';
-    d.style.animationDuration = (6 + Math.random()*10) + 's'; d.style.animationDelay = (-Math.random()*12) + 's';
-    pc.appendChild(d);
-  }
-});
-
-
-/* ---------- merchandising guides ---------- */
+/* bu: "CE" | "AV" | "HA" | "AC"  (official BUs; CE = guidelines for all BUs)
+   isNew: true → "New" tag and sorted to the top
+   previous: true → moved under "Previous editions" (also automatic once validTo has passed)
+   validTo: "YYYY-MM-DD" (optional) · sizeMB is shown so people on mobile data know */
 const GUIDES = [
-  {title:"CE Merchandising Guidelines 2026", cat:"CE", file:"guides/ce-merch-guidelines-2026.pdf", cover:"guides/ce-merch-guidelines-2026.jpg", pages:10, portrait:true, badge:"New",
-   desc:"One-pager overview of the 2026 CE merchandising guidelines (updated Aug 6, 2026)."},
-  {title:"2026 TV, Sound Device & Display POSM Guide", cat:"TV / SD / DS", file:"guides/tv-sd-ds-merch-guide-2026.pdf", cover:"guides/tv-sd-ds-merch-guide-2026.jpg", pages:43, badge:"2026",
-   desc:"POSM merchandising guideline for TV, Sound Device and Display (5th version)."},
-  {title:"2026 Refrigerator Guide — Nationwide", cat:"REF", file:"guides/ref-merch-guide-2026-nationwide.pdf", cover:"guides/ref-merch-guide-2026-nationwide.jpg", pages:28, badge:"2026",
-   desc:"Active units, nationwide. Valid 04/01/2026 – 12/31/2026."},
-  {title:"2026 Refrigerator Guide — Nationwide & SM", cat:"REF", file:"guides/ref-merch-guide-2026-sm.pdf", cover:"guides/ref-merch-guide-2026-sm.jpg", pages:30, badge:"2026",
-   desc:"Active units for nationwide and SM models."},
-  {title:"Window-Type AC (WAC) POSM Merch Guide", cat:"AC", file:"guides/ac-window-type-2026.pdf", cover:"guides/ac-window-type-2026.jpg", pages:10, badge:"2026",
-   desc:"Window-Type Compact body POSM, topper, ear wobblers, LED stick-on, 10-year warranty tag, energy labels and rack simulations."},
-  {title:"WindFree 1Way Cassette POSM Merch Guide", cat:"AC", file:"guides/ac-windfree-1way-2025.pdf", cover:"guides/ac-windfree-1way-2025.jpg", pages:9, badge:"2025",
-   desc:"1Way body POSM, Move Up, Slim and K-Wind stick-ons, 5-year warranty tag and rack execution."},
-  {title:"2026 Washing Machine Guide — WD10 & WA40", cat:"WM", file:"guides/wm-2026-wd10-wa40.pdf", cover:"guides/wm-2026-wd10-wa40.jpg", pages:3, badge:"New",
-   desc:"New models: WD10 front load washer-dryer combo and WA40 top load — POP list and placement."},
-  {title:"Washing Machine Guide — WA80F Nationwide", cat:"WM", file:"guides/wm-wa80f-nationwide.pdf", cover:"guides/wm-wa80f-nationwide.jpg", pages:2, badge:"2026",
-   desc:"New nationwide top load fully automatic models WA80F (21\", 24\", 25\") — outer and inner POP."},
-  {title:"Bespoke AI Laundry Merch Guide (WD25DB8995BZTC)", cat:"WM", file:"guides/wm-bespoke-ai-laundry-2024.pdf", cover:"guides/wm-bespoke-ai-laundry-2024.jpg", pages:7, badge:"2024",
-   desc:"Bespoke AI Laundry Combo simulation and POSM: body POSM, AI topper, New Arrival tag, product ID and inner POP."},
-  {title:"2025 TV & Sound Device Retail Merch Guide", cat:"TV / SD / DS", file:"guides/tv-sd-merch-guide-2025.pdf", cover:"guides/tv-sd-merch-guide-2025.jpg", pages:48, badge:"2025",
-   desc:"Previous-year TV and Sound Device retail merchandising guide, kept for reference."}
+  {title:"CE Merchandising Guidelines 2026",              bu:"CE", file:"guides/ce-merch-guidelines-2026.pdf",        cover:"guides/ce-merch-guidelines-2026.jpg",        pages:10, sizeMB:3.4, isNew:true, portrait:true, note:"Updated Aug 6, 2026"},
+  {title:"TV, Sound Device & Display POSM Guide 2026",    bu:"AV", file:"guides/tv-sd-ds-merch-guide-2026.pdf",        cover:"guides/tv-sd-ds-merch-guide-2026.jpg",        pages:43, sizeMB:6.5, note:"5th version"},
+  {title:"Refrigerator Guide 2026 — Nationwide",          bu:"HA", file:"guides/ref-merch-guide-2026-nationwide.pdf", cover:"guides/ref-merch-guide-2026-nationwide.jpg", pages:28, sizeMB:3.5, validTo:"2026-12-31"},
+  {title:"Refrigerator Guide 2026 — Nationwide & SM",     bu:"HA", file:"guides/ref-merch-guide-2026-sm.pdf",         cover:"guides/ref-merch-guide-2026-sm.jpg",         pages:30, sizeMB:3.7},
+  {title:"Washing Machine Guide 2026 — WD10 & WA40",      bu:"HA", file:"guides/wm-2026-wd10-wa40.pdf",               cover:"guides/wm-2026-wd10-wa40.jpg",               pages:3,  sizeMB:0.4, isNew:true},
+  {title:"Washing Machine Guide 2026 — WA80F Nationwide", bu:"HA", file:"guides/wm-wa80f-nationwide.pdf",             cover:"guides/wm-wa80f-nationwide.jpg",             pages:2,  sizeMB:0.1},
+  {title:"Window-Type AC POSM Guide 2026",                bu:"AC", file:"guides/ac-window-type-2026.pdf",             cover:"guides/ac-window-type-2026.jpg",             pages:10, sizeMB:1.4},
+  {title:"TV & Sound Device Retail Merch Guide 2025",     bu:"AV", file:"guides/tv-sd-merch-guide-2025.pdf",          cover:"guides/tv-sd-merch-guide-2025.jpg",          pages:48, sizeMB:9.2, previous:true, short:"2025 TV & SD"},
+  {title:"WindFree 1Way Cassette POSM Guide 2025",        bu:"AC", file:"guides/ac-windfree-1way-2025.pdf",           cover:"guides/ac-windfree-1way-2025.jpg",           pages:9,  sizeMB:1.3, previous:true, short:"2025 WindFree"},
+  {title:"Bespoke AI Laundry Merch Guide 2024",           bu:"HA", file:"guides/wm-bespoke-ai-laundry-2024.pdf",      cover:"guides/wm-bespoke-ai-laundry-2024.jpg",      pages:7,  sizeMB:0.8, previous:true, short:"2024 Bespoke AI Laundry"}
 ];
-const ggrid = document.getElementById('ggrid'), gchips = document.getElementById('gchips');
-const GCATS = ['All', ...new Set(GUIDES.map(g => g.cat))];
-function renderGuides(cat){
-  ggrid.innerHTML = '';
-  GUIDES.filter(g => cat === 'All' || g.cat === cat).forEach(g => {
-    const c = document.createElement('div'); c.className = 'gcard';
-    c.innerHTML = `<a class="gcover${g.portrait ? ' portrait' : ''}" href="${encodeURI(g.file)}" target="_blank" rel="noopener" style="background-image:url('${g.cover}')" aria-label="View ${g.title}">
-        <span class="badge">${g.badge}</span><span class="pages">${g.pages} pages</span></a>
-      <div class="gbody"><span class="num">${g.cat}</span><h3 style="margin-top:8px">${g.title}</h3><p>${g.desc}</p>
-        <div class="gact"><a class="view" href="${encodeURI(g.file)}" target="_blank" rel="noopener">View</a><a href="${encodeURI(g.file)}" download>Download</a></div></div>`;
-    ggrid.appendChild(c);
-  });
-  gchips.querySelectorAll('.chip').forEach(b => b.classList.toggle('on', b.dataset.cat === cat));
-}
-GCATS.forEach(cat => { const b = document.createElement('button'); b.className = 'chip'; b.type = 'button'; b.dataset.cat = cat; b.textContent = cat; b.onclick = () => renderGuides(cat); gchips.appendChild(b); });
-renderGuides('All');
 
-/* ---------- tutorials ---------- */
 const VIDEOS = [
-  {title:"How to Install",          file:"videos/how-to-install.mp4",          poster:"videos/how-to-install.jpg",          dur:"1:19", fmt:"Phone",
-   desc:"Install RMAS POSM on your phone as an app — Android (Chrome) and iPhone."},
-  {title:"Using in Browser",        file:"videos/using-in-browser.mp4",        poster:"videos/using-in-browser.jpg",        dur:"2:44", fmt:"Computer",
-   desc:"Open and use the tools in Chrome or Microsoft Edge on a computer."},
-  {title:"Inventory Tool Training", file:"videos/inventory-tool-training.mp4", poster:"videos/inventory-tool-training.jpg", dur:"8:14", fmt:"Full training",
-   desc:"Full walkthrough of the POSM Inventory Tool — stock, requests, transfers and reports."}
+  {title:"How to install",          desc:"Add the tools to your phone — Android and iPhone", file:"videos/how-to-install.mp4",          poster:"videos/how-to-install.jpg",          dur:"1:19"},
+  {title:"Using in a browser",      desc:"Chrome or Edge on a computer",                     file:"videos/using-in-browser.mp4",        poster:"videos/using-in-browser.jpg",        dur:"2:44"},
+  {title:"Inventory tool training", desc:"Stock, requests, transfers and reports",           file:"videos/inventory-tool-training.mp4", poster:"videos/inventory-tool-training.jpg", dur:"8:14"}
 ];
-const vgrid = document.getElementById('vgrid'), modal = document.getElementById('modal'), player = document.getElementById('player');
-VIDEOS.forEach((v, i) => {
-  const b = document.createElement('button');
-  b.className = 'vcard'; b.type = 'button';
-  b.innerHTML = `<div class="thumb" style="background-image:url('${v.poster}')">
-      <span class="fmt">${v.fmt}</span>
-      <span class="pbtn"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span>
-      <span class="dur">${v.dur}</span></div>
-    <div class="vbody"><span class="num">${String(i+1).padStart(2,'0')}</span><h3>${v.title}</h3><p>${v.desc}</p></div>`;
-  b.onclick = () => openVideo(v);
-  vgrid.appendChild(b);
-});
-function openVideo(v){
-  player.src = encodeURI(v.file); player.poster = v.poster;
-  document.getElementById('mtitle').textContent = v.title;
-  modal.classList.add('open'); document.body.style.overflow = 'hidden';
-  player.play().catch(()=>{});
-}
-function closeVideo(){ player.pause(); player.removeAttribute('src'); player.load(); modal.classList.remove('open'); document.body.style.overflow = ''; }
-document.getElementById('mclose').onclick = closeVideo;
-modal.addEventListener('click', e => { if (e.target === modal) closeVideo(); });
-document.addEventListener('keydown', e => { if (e.key === 'Escape' && modal.classList.contains('open')) closeVideo(); });
 
-/* ---------- hero slides ---------- */
-(() => {
-  const SLIDES = [
-    {cat:"TV & Sound Device", title:"2026 TV Line-up", text:"Micro RGB, OLED, Neo QLED, Mini LED and Crystal UHD — displayed the Samsung way on every baywall.", link:"#guides", cta:"View TV merch guide", filter:"TV / SD / DS"},
-    {cat:"Refrigerators", title:"Bespoke AI Refrigerators", text:"Top Mount, Bottom Mount, Side by Side and French Door models — with the right POP for every unit.", link:"#guides", cta:"View REF merch guide", filter:"REF"},
-    {cat:"Sound Device", title:"Sound Tower", text:"Roll with the party vibe. Sound Tower display and topper guidelines for store execution.", link:"#guides", cta:"View merch guide", filter:"TV / SD / DS"},
-    {cat:"Display Monitors", title:"Odyssey & Smart Monitors", text:"Odyssey G5, Smart Monitor M7, ViewFinity S7 and Essential Monitor S3 table standees.", link:"#guides", cta:"View merch guide", filter:"TV / SD / DS"},
-    {cat:"Air Conditioners", title:"WindFree & Window-Type AC", text:"WindFree 1Way Cassette and Window-Type Compact — body POSM, Move Up, Slim, K-Wind, warranty tags and energy labels.", link:"#guides", cta:"View AC merch guide", filter:"AC"},
-    {cat:"Washing Machines", title:"Bespoke AI Laundry & New WM", text:"Bespoke AI Laundry Combo, WD10 front load washer-dryer, WA40 and WA80F top loads — topper, top POP, body POP and warranty tags.", link:"#guides", cta:"View WM merch guide", filter:"WM"}
-  ];
-  const slides=[...document.querySelectorAll('#slides .slide')], track=document.getElementById('etrack');
-  const info=document.getElementById('einfo'), cat=document.getElementById('ecat'), now=document.getElementById('enow');
-  document.getElementById('etotal').textContent=String(SLIDES.length).padStart(2,'0');
-  const dots=SLIDES.map((_,i)=>{const b=document.createElement('button');b.type='button';b.setAttribute('aria-label','Slide '+(i+1));b.onclick=()=>{go(i);restart();};track.appendChild(b);return b;});
-  let cur=0, timer;
-  function go(i){
-    cur=(i+SLIDES.length)%SLIDES.length;
-    slides.forEach((s,k)=>s.classList.toggle('on',k===cur));
-    dots.forEach((d,k)=>d.classList.toggle('on',k<=cur));
-    const d=SLIDES[cur];
-    cat.textContent=d.cat; now.textContent=String(cur+1).padStart(2,'0');
-    info.innerHTML=`<h4>${d.title}</h4><p>${d.text}</p><a href="${d.link}" data-f="${d.filter}">${d.cta} →</a>`;
-    info.classList.remove('swap'); void info.offsetWidth; info.classList.add('swap');
-    info.querySelector('a').onclick=()=>{ if (typeof renderGuides==='function') renderGuides(d.filter); };
-  }
-  function restart(){ clearInterval(timer); timer=setInterval(()=>go(cur+1),6500); }
-  let x0=null; const hero=document.querySelector('.hero-e');
-  hero.addEventListener('touchstart',e=>x0=e.touches[0].clientX,{passive:true});
-  hero.addEventListener('touchend',e=>{ if(x0===null)return; const dx=e.changedTouches[0].clientX-x0; if(Math.abs(dx)>50){go(cur+(dx<0?1:-1));restart();} x0=null; });
-  document.addEventListener('visibilitychange',()=>document.hidden?clearInterval(timer):restart());
-  go(0); restart();
+/* =====================================================================
+   PAGE LOGIC — no need to edit below this line
+   ===================================================================== */
+const BU_ORDER = ["CE","AV","HA","AC"];
+const PREVIEW_COUNT = 3;              // guides shown under "All" before "Show all"
+const STORE_KEY = "vaultsync.ui.v2";
+
+const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+const ICONS = {
+  box:'<path d="M3 7l9-4 9 4-9 4-9-4z"/><path d="M3 7v10l9 4 9-4V7"/><path d="M12 11v10"/>',
+  store:'<path d="M4 10v10h16V10"/><path d="M3 5h18l-1 5a2.5 2.5 0 0 1-5 0 2.5 2.5 0 0 1-5 0 2.5 2.5 0 0 1-5 0z"/><path d="M10 20v-5h4v5"/>',
+  chart:'<path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/>',
+  pie:'<circle cx="12" cy="12" r="9"/><path d="M12 3v9l6.4 6.4"/>',
+  exec:'<rect x="5" y="4" width="14" height="17" rx="2"/><path d="M9 4V3h6v1"/><path d="M8.5 10l1.5 1.5 3-3M8.5 16l1.5 1.5 3-3"/>'
+};
+const svg = (paths, size=24, sw=1.6, cls='') => `<svg${cls?` class="${cls}"`:''} width="${size}" height="${size}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="${sw}" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${paths}</svg>`;
+const CHEV = svg('<path d="M6 9l6 6 6-6"/>', 18, 2, 'chev');
+const DL = svg('<path d="M12 4v11M7 10l5 5 5-5M5 20h14"/>', 15, 2);
+
+/* remembered UI state — per visitor, this browser only; works even if storage is blocked */
+const ui = (()=>{ try{ return JSON.parse(localStorage.getItem(STORE_KEY)) || {}; }catch(e){ return {}; } })();
+const saveUI = ()=>{ try{ localStorage.setItem(STORE_KEY, JSON.stringify(ui)); }catch(e){} };
+
+/* ---------- tools ---------- */
+(function renderTools(){
+  const grid = document.getElementById('toolGrid');
+  TOOLS.filter(t=>t.status==='live' && t.url).forEach(t=>{
+    const a = document.createElement('a');
+    // VaultSync tools open in the same tab (each has a bar back to VaultSync);
+    // outside links such as Google Drive open in a new tab.
+    a.className = 'tool'; a.href = t.url;
+    if(t.external){ a.target = '_blank'; a.rel = 'noopener'; }
+    a.setAttribute('aria-label', `${t.name}: ${t.desc}${t.external ? ' (opens in a new tab)' : ''}`);
+    a.innerHTML = `<span class="ic">${svg(ICONS[t.icon]||ICONS.box, 34)}</span>
+      <span class="tx"><h3>${esc(t.name)}</h3><p>${esc(t.desc)}</p></span>
+      <span class="go"><span class="lbl">${t.external ? 'Open folder' : 'Open tool'}</span><span aria-hidden="true">${t.external ? '↗' : '→'}</span></span>`;
+    grid.appendChild(a);
+  });
+  document.getElementById('soonList').innerHTML = TOOLS.filter(t=>t.status==='soon')
+    .map(t=>`<span>${esc(t.name)} <i>Coming soon</i></span>`).join('');
 })();
-document.getElementById('yr').textContent = new Date().getFullYear();
+
+/* ---------- guides ---------- */
+const today = new Date().toISOString().slice(0,10);
+const isPrevious = g => !!g.previous || (!!g.validTo && g.validTo < today);
+const current = GUIDES.filter(g=>!isPrevious(g)).sort((a,b)=>(b.isNew?1:0)-(a.isNew?1:0)); // New first, list order kept otherwise
+const previous = GUIDES.filter(isPrevious);
+let tab = BU_ORDER.includes(ui.tab) ? ui.tab : 'All';
+let showAll = !!ui.showAll;
+let prevOpen = false;
+const fmtDate = d => new Date(d+'T00:00:00').toLocaleDateString('en-US',{month:'short',day:'numeric',year:'numeric'});
+
+function guideRow(g){
+  const facts = [`${g.pages} pages`, `${g.sizeMB} MB`];
+  if(g.validTo) facts.push('Valid to ' + fmtDate(g.validTo));
+  if(g.note) facts.push(g.note);
+  const href = encodeURI(g.file);
+  return `<div class="row">
+    <div class="thumb${g.portrait?' portrait':''}" style="background-image:url('${encodeURI(g.cover)}')" aria-hidden="true"></div>
+    <div><div class="r-title">${esc(g.title)}</div>
+      <div class="r-meta">${g.isNew?'<span class="pill new">New</span>':''}<span class="pill bu">${esc(g.bu)}</span><span>${esc(facts.join(' · '))}</span></div></div>
+    <div class="r-act">
+      <a class="btn primary" href="${href}" target="_blank" rel="noopener" aria-label="View ${esc(g.title)} (opens PDF)">View</a>
+      <a class="btn" href="${href}" download aria-label="Download ${esc(g.title)}, ${g.sizeMB} MB">${DL}<span class="lbl-dl">Download</span></a>
+    </div></div>`;
+}
+
+function renderGuides(){
+  const tabs = ['All', ...BU_ORDER.filter(bu=>current.some(g=>g.bu===bu))];
+  if(!tabs.includes(tab)) tab = 'All';
+  document.getElementById('guideTabs').innerHTML = tabs.map(t=>{
+    const n = t==='All' ? current.length : current.filter(g=>g.bu===t).length;
+    return `<button class="tab" type="button" data-tab="${t}" aria-pressed="${t===tab}">${t}<span class="n">${n}</span></button>`;
+  }).join('');
+
+  const list = tab==='All' ? current : current.filter(g=>g.bu===tab);
+  const prevList = tab==='All' ? previous : previous.filter(g=>g.bu===tab);
+  // A BU tab always shows its full list; "All" previews the newest few.
+  const folded = tab==='All' && !showAll && list.length > PREVIEW_COUNT;
+  const visible = folded ? list.slice(0, PREVIEW_COUNT) : list;
+
+  let html = visible.map(guideRow).join('') || `<div class="empty">No current ${esc(tab)} guides.</div>`;
+  if(tab==='All' && list.length > PREVIEW_COUNT){
+    html += `<button class="fold" type="button" id="btnShowAll" aria-expanded="${!folded}"><span>${folded ? `Show all ${list.length} current guides` : 'Show fewer'}</span>${CHEV}</button>`;
+  }
+  if(prevList.length){
+    const names = prevList.map(g=>g.short||g.title).join(', ');
+    html += `<button class="fold" type="button" id="btnPrev" aria-expanded="${prevOpen}" aria-controls="prevList"><span>Previous editions (${prevList.length})${prevOpen ? '' : ' — ' + esc(names)}</span>${CHEV}</button>
+      <div class="prev-list" id="prevList"${prevOpen ? '' : ' hidden'}>${prevList.map(guideRow).join('')}</div>`;
+  }
+  document.getElementById('guideCard').innerHTML = html;
+}
+document.getElementById('guideTabs').addEventListener('click', e=>{
+  const b = e.target.closest('[data-tab]'); if(!b) return;
+  tab = b.dataset.tab; ui.tab = tab; saveUI(); renderGuides();
+  const nb = document.querySelector(`[data-tab="${tab}"]`); if(nb) nb.focus();
+});
+document.getElementById('guideCard').addEventListener('click', e=>{
+  if(e.target.closest('#btnShowAll')){ showAll = !showAll; ui.showAll = showAll; saveUI(); renderGuides(); document.getElementById('btnShowAll').focus(); }
+  else if(e.target.closest('#btnPrev')){ prevOpen = !prevOpen; renderGuides(); document.getElementById('btnPrev').focus(); }
+});
+document.getElementById('guidesSub').textContent = `${current.length} current · view in browser or download`;
+renderGuides();
+
+/* ---------- tutorials (folded by default; remembers the visitor's choice) ---------- */
+const toSec = d => { const [m,s] = d.split(':').map(Number); return m*60 + s; };
+const totalMin = Math.round(VIDEOS.reduce((s,v)=>s+toSec(v.dur),0)/60);
+document.getElementById('tutSummary').textContent = `${VIDEOS.length} videos · ${totalMin} min · start with installation`;
+document.getElementById('vidGrid').innerHTML = VIDEOS.map((v,i)=>`
+  <button class="vid" type="button" data-vid="${i}" aria-label="Play ${esc(v.title)}, ${esc(v.dur)}">
+    <span class="vth" style="background-image:url('${encodeURI(v.poster)}')"><span class="pb" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span><span class="dur">${esc(v.dur)}</span></span>
+    <span class="vb"><span class="vt">${i+1} · ${esc(v.title)}</span><span class="vd">${esc(v.desc)}</span></span>
+  </button>`).join('');
+const tutToggle = document.getElementById('tutToggle'), tutWrap = document.getElementById('tutWrap');
+function setTut(open){ tutToggle.setAttribute('aria-expanded', String(open)); tutWrap.hidden = !open; }
+setTut(!!ui.tutOpen);
+tutToggle.addEventListener('click', ()=>{ ui.tutOpen = tutWrap.hidden; saveUI(); setTut(ui.tutOpen); });
+document.querySelectorAll('a[href="#tutorials"]').forEach(a=>a.addEventListener('click', ()=>setTut(true)));
+
+/* ---------- video modal: focus moves in, stays in, and returns ---------- */
+const modal = document.getElementById('modal'), player = document.getElementById('player'), mClose = document.getElementById('mClose');
+let lastFocus = null;
+document.getElementById('vidGrid').addEventListener('click', e=>{
+  const b = e.target.closest('[data-vid]'); if(!b) return;
+  const v = VIDEOS[+b.dataset.vid];
+  lastFocus = b;
+  player.src = encodeURI(v.file); player.poster = v.poster;
+  document.getElementById('mTitle').textContent = v.title;
+  modal.classList.add('open'); document.body.style.overflow = 'hidden';
+  mClose.focus();
+  player.play().catch(()=>{});
+});
+function closeVideo(){
+  player.pause(); player.removeAttribute('src'); player.load();
+  modal.classList.remove('open'); document.body.style.overflow = '';
+  if(lastFocus) lastFocus.focus();
+}
+mClose.addEventListener('click', closeVideo);
+modal.addEventListener('click', e=>{ if(e.target === modal) closeVideo(); });
+document.addEventListener('keydown', e=>{
+  if(!modal.classList.contains('open')) return;
+  if(e.key === 'Escape') closeVideo();
+  if(e.key === 'Tab'){ e.preventDefault(); (document.activeElement === mClose ? player : mClose).focus(); }
+});
+
+/* ---------- footer ---------- */
+document.getElementById('footMeta').innerHTML = `Updated as of ${esc(SITE.updated)} <span class="ver">· ${esc(SITE.version)}</span>`;
 </script>
 </body>
 </html>
