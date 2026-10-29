@@ -231,8 +231,8 @@ footer .ver{color:var(--ink-soft);opacity:.8}
    from these lists automatically.
    ===================================================================== */
 const SITE = {
-  updated: "Oct 18, 2026",   // ← change whenever you update guides or tools
-  version: "v2.1.1"
+  updated: "Oct 29, 2026",   // ← change whenever you update guides or tools
+  version: "v2.2.0"
 };
 
 /* status: "live" (card opens url) · "soon" (shown as a Coming soon chip)
@@ -242,6 +242,7 @@ const TOOLS = [
   {name:"POSM Request Form",   desc:"Stores and TS request POSM in one submission",         icon:"store", status:"live", url:"https://rmas-ce.github.io/VS-REQUEST-FORM/"},
   {name:"Proof of Deployment", desc:"Photo proof of installed POSM after delivery",     icon:"camera",status:"live", url:"https://rmas-ce.github.io/VS-REQUEST-FORM/#proof"},
   {name:"TS Scorecard",        desc:"Monthly Trade Supervisor grading per BU",              icon:"chart", status:"live", url:"https://rmas-ce.github.io/VS-TS-GRADING/"},
+  {name:"POSM Execution Dashboard", desc:"TS store visits, POSM status per model and store flooring", icon:"pin", status:"live", url:"https://rmas-ce.github.io/IN-STORE-POSM-CHECKING/dashboard.html"},
   {name:"Execution Analytics", desc:"SPOP, TV BG and SB compliance · Google Drive",         icon:"pie",   status:"live", external:true, url:"https://drive.google.com/drive/folders/1NQLRVrS4uuNL1zwDpdtPzVKTjHJ8dwhy"},
   {name:"POSM Display Audit",  desc:"Store visit audit for leaders",                        icon:"exec",  status:"soon", url:""}
 ];
@@ -283,6 +284,7 @@ const ICONS = {
   chart:'<path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/>',
   camera:'<path d="M4 8h3l2-3h6l2 3h3v11H4V8Z"/><circle cx="12" cy="13" r="3.5"/>',
   pie:'<circle cx="12" cy="12" r="9"/><path d="M12 3v9l6.4 6.4"/>',
+  pin:'<path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><path d="M9.2 9.6l2 2 3.6-3.6"/>',
   exec:'<rect x="5" y="4" width="14" height="17" rx="2"/><path d="M9 4V3h6v1"/><path d="M8.5 10l1.5 1.5 3-3M8.5 16l1.5 1.5 3-3"/>'
 };
 const svg = (paths, size=24, sw=1.6, cls='') => `<svg${cls?` class="${cls}"`:''} width="${size}" height="${size}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="${sw}" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${paths}</svg>`;
